@@ -95,11 +95,11 @@
 	<variableList>
 		<variable>
 			<name>CHIBIOS</name>
-			<value>file:/Users/Andy/ChibiStudio/ChibiOS</value>
+			<value>file:/Users/mikevanis/Documents/workspace/ChibiStudio/ChibiOS</value>
 		</variable>
 		<variable>
 			<name>CHIBI_STUDIO</name>
-			<value>file:/Users/Andy/ChibiStudio</value>
+			<value>file:/Users/mikevanis/Documents/workspace/ChibiStudio</value>
 		</variable>
 	</variableList>
 </projectDescription>
