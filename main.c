@@ -656,7 +656,7 @@ static void cmd_index_questions(BaseSequentialStream *chp, int argc, char *argv[
 	 * No returns.
 	 * No parameters.
 	 */
-
+	chprintf(chp, "Index questions");
 
 }
 
@@ -666,6 +666,7 @@ static void cmd_get_total_questions(BaseSequentialStream *chp, int argc, char *a
 	 * Returns a uint8_t through UART.
 	 * No parameters.
 	 */
+	chprintf(chp, "Total num of questions");
 }
 
 static void cmd_get_question(BaseSequentialStream *chp, int argc, char *argv[]) {
@@ -674,12 +675,14 @@ static void cmd_get_question(BaseSequentialStream *chp, int argc, char *argv[]) 
 	 * through UART.
 	 * Parameter - The question index.
 	 */
+	chprintf(chp, "Get question");
 }
 static void cmd_mark_question(BaseSequentialStream *chp, int argc, char *argv[]) {
 	/* Marks a question as answered in the questions file.
 	 * No returns.
 	 * Parameter - The question index.
 	 */
+	chprintf(chp, "Mark question");
 }
 
 static uint8_t AsciiToHex(char c) {

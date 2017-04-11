@@ -65,7 +65,7 @@ endif
 PROJECT = CAM-DCMI_SD
 
 # Imported source files and paths
-CHIBIOS = ../..
+CHIBIOS = ../ChibiStudio/ChibiOS
 include $(CHIBIOS)/boards/ST_STM32F4_DISCOVERY/board.mk
 include $(CHIBIOS)/os/hal/platforms/STM32F4xx/platform.mk
 include $(CHIBIOS)/os/hal/hal.mk

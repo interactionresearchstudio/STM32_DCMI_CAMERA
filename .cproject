@@ -22,8 +22,8 @@
 							<tool id="org.eclipse.cdt.build.core.settings.holder.libs.2143276802" name="holder for library settings" superClass="org.eclipse.cdt.build.core.settings.holder.libs"/>
 							<tool id="org.eclipse.cdt.build.core.settings.holder.1873650595" name="Assembly" superClass="org.eclipse.cdt.build.core.settings.holder">
 								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.1226257327" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
-									<listOptionValue builtIn="false" value="/Users/Andy/ChibiStudio/ChibiOS/ext/fatfs"/>
-									<listOptionValue builtIn="false" value="/Users/Andy/ChibiStudio/ChibiOS/boards/ST_STM32F4_DISCOVERY"/>
+									<listOptionValue builtIn="false" value="/Users/mikevanis/Documents/workspace/ChibiStudio/ChibiOS/ext/fatfs"/>
+									<listOptionValue builtIn="false" value="/Users/mikevanis/Documents/workspace/ChibiStudio/ChibiOS/boards/ST_STM32F4_DISCOVERY"/>
 								</option>
 								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.1337802279" languageId="org.eclipse.cdt.core.assembly" languageName="Assembly" sourceContentType="org.eclipse.cdt.core.asmSource" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
 							</tool>
@@ -51,4 +51,5 @@
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
 </cproject>
