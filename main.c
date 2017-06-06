@@ -176,7 +176,7 @@ static const ShellCommand commands[] = { { "mem", cmd_mem }, { "threads",
 		cmd_cam_send }, { "cam_status", cmd_cam_status }, { "cam_reg_write",
 		cmd_cam_reg_write }, { "cam_reg_read", cmd_cam_reg_read },
 		{ "index_qs", cmd_index_questions }, { "get_total_qs", cmd_get_total_questions },
-		{ "get_q", cmd_get_question }, { "mark_q", cmd_mark_question },
+		{ "get_question", cmd_get_question }, { "mark_question", cmd_mark_question },
 		{ NULL, NULL } };
 
 static const ShellConfig shell_cfg1 =
@@ -661,7 +661,7 @@ static void cmd_index_questions(BaseSequentialStream *chp, int argc, char *argv[
 	 * No returns.
 	 * No parameters.
 	 */
-	chprintf(chp, "Index questions");
+	chprintf(chp, "Index questions\r\n");
 
 }
 
@@ -671,7 +671,7 @@ static void cmd_get_total_questions(BaseSequentialStream *chp, int argc, char *a
 	 * Returns a uint8_t through UART.
 	 * No parameters.
 	 */
-	chprintf(chp, "Total num of questions");
+	chprintf(chp, "Total num of questions\r\n");
 }
 
 static void cmd_get_question(BaseSequentialStream *chp, int argc, char *argv[]) {
@@ -680,18 +680,34 @@ static void cmd_get_question(BaseSequentialStream *chp, int argc, char *argv[]) 
 	 * through UART.
 	 * Parameter - The question index.
 	 */
-	uint8_t questionIndex;
-	questionIndex = (AsciiToHex(argv[0][0]) << 4) ^ AsciiToHex(argv[0][1]);
-	chprintf(chp, "Get question " + argv[0][0] + argv[0][1]);
+	uint8_t val = 0;
+
+	if (argc != 1) {
+		chprintf(chp, "Wrong number of arguments!\r\n");
+		chprintf(chp, "Enter: get_question AA, where AA is an integer from 1 to 99\r\n");
+		return;
+	}
+
+	if (argv[0][1] == 0) val = AsciiToHex(argv[0][0]);
+	else val = (AsciiToHex(argv[0][0]) * 10) + AsciiToHex(argv[0][1]);
+	chprintf(chp, "Getting question %d\r\n", val);
 }
 static void cmd_mark_question(BaseSequentialStream *chp, int argc, char *argv[]) {
 	/* Marks a question as answered in the questions file.
 	 * No returns.
 	 * Parameter - The question index.
 	 */
-	uint8_t questionIndex;
-	questionIndex = (AsciiToHex(argv[0][0]) << 4) ^ AsciiToHex(argv[0][1]);
-	chprintf(chp, "Mark question " + argv[0][0] + argv[0][1]);
+	uint8_t val;
+
+	if (argc != 1) {
+		chprintf(chp, "Wrong number of arguments!\r\n");
+		chprintf(chp, "Enter: mark_question n, where n is an integer from 1 to 99\r\n");
+		return;
+	}
+
+	if (argv[0][1] == 0) val = AsciiToHex(argv[0][0]);
+	else val = (AsciiToHex(argv[0][0]) * 10) + AsciiToHex(argv[0][1]);
+	chprintf(chp, "Marking question %d\r\n", val);
 }
 
 static uint8_t AsciiToHex(char c) {

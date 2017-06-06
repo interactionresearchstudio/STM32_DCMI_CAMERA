@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
   53              	.LVL1:
   54              		.loc 1 82 0
   55 0000 0122     		movs	r2, #1
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 2
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 2
 
 
   56              		.loc 1 83 0
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  109              		.loc 1 110 0
  110 0018 0023     		movs	r3, #0
  111              	@ 110 "../ChibiStudio/ChibiOS/os/hal/src/pwm.c" 1
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 3
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 3
 
 
  112 001a 83F31188 		msr     BASEPRI, r3
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  166              		.cfi_endproc
  167              	.LFE121:
  168              		.size	pwmStop, .-pwmStop
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 4
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 4
 
 
  169 001a 00BFAFF3 		.section	.text.pwmChangePeriod,"ax",%progbits
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  221              		@ args = 0, pretend = 0, frame = 0
  222              		@ frame_needed = 0, uses_anonymous_args = 0
  223              	.LVL7:
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 5
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 5
 
 
  224 0000 08B5     		push	{r3, lr}
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  276              	.LBE12:
  277              		.loc 1 208 0
  278 0008 FFF7FEFF 		bl	pwm_lld_disable_channel
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 6
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 6
 
 
  279              	.LVL10:
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  331 0045 03       		.uleb128 0x3
  332 0046 01       		.byte	0x1
  333 0047 08       		.byte	0x8
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 7
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 7
 
 
  334 0048 12020000 		.4byte	.LASF2
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  388 00b4 65000000 		.4byte	0x65
  389 00b8 04       		.uleb128 0x4
  390 00b9 6C020000 		.4byte	.LASF16
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 8
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 8
 
 
  391 00bd 03       		.byte	0x3
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  445 0129 05       		.byte	0x5
  446 012a 6F01     		.2byte	0x16f
  447 012c 72010000 		.4byte	0x172
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 9
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 9
 
 
  448 0130 0B       		.uleb128 0xb
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  502 01a2 06       		.byte	0x6
  503 01a3 9F01     		.2byte	0x19f
  504 01a5 CA000000 		.4byte	0xca
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 10
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 10
 
 
  505 01a9 00       		.byte	0
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  559 021d 24       		.byte	0x24
  560 021e 0C       		.uleb128 0xc
  561 021f 50534300 		.ascii	"PSC\000"
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 11
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 11
 
 
  562 0223 06       		.byte	0x6
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  616 0297 06       		.byte	0x6
  617 0298 B201     		.2byte	0x1b2
  618 029a CA000000 		.4byte	0xca
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 12
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 12
 
 
  619 029e 58       		.byte	0x58
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  673 0313 34       		.byte	0x34
  674 0314 05       		.byte	0x5
  675 0315 4001     		.2byte	0x140
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 13
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 13
 
 
  676 0317 6A030000 		.4byte	0x36a
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  730 038d 7A030000 		.4byte	0x37a
  731 0391 0D       		.uleb128 0xd
  732 0392 04       		.byte	0x4
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 14
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 14
 
 
  733 0393 B2020000 		.4byte	0x2b2
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  787 0411 23040000 		.4byte	0x423
  788 0415 18       		.uleb128 0x18
  789 0416 746D7000 		.ascii	"tmp\000"
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 15
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 15
 
 
  790 041a 01       		.byte	0x1
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  844 0489 00       		.byte	0
  845 048a 19       		.uleb128 0x19
  846 048b 12000000 		.4byte	.LBB7
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 16
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 16
 
 
  847 048f 08000000 		.4byte	.LBE7-.LBB7
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  901 04fe 53       		.byte	0x53
  902 04ff 00       		.byte	0
  903 0500 1C       		.uleb128 0x1c
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 17
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 17
 
 
  904 0501 10000000 		.4byte	.LBB9
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  958 0582 18       		.uleb128 0x18
  959 0583 746D7000 		.ascii	"tmp\000"
  960 0587 01       		.byte	0x1
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 18
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 18
 
 
  961 0588 B7       		.byte	0xb7
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  1015 05fd 18       		.uleb128 0x18
  1016 05fe 746D7000 		.ascii	"tmp\000"
  1017 0602 01       		.byte	0x1
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 19
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 19
 
 
  1018 0603 D1       		.byte	0xd1
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  1072 0671 20       		.uleb128 0x20
  1073 0672 45000000 		.4byte	.LASF69
  1074 0676 05       		.byte	0x5
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 20
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 20
 
 
  1075 0677 D701     		.2byte	0x1d7
@@ -1198,7 +1198,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  1129 002d 0E       		.uleb128 0xe
  1130 002e 3A       		.uleb128 0x3a
  1131 002f 0B       		.uleb128 0xb
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 21
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 21
 
 
  1132 0030 3B       		.uleb128 0x3b
@@ -1258,7 +1258,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  1186 0066 13       		.uleb128 0x13
  1187 0067 01       		.byte	0x1
  1188 0068 03       		.uleb128 0x3
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 22
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 22
 
 
  1189 0069 0E       		.uleb128 0xe
@@ -1318,7 +1318,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  1243 009f 19       		.uleb128 0x19
  1244 00a0 01       		.uleb128 0x1
  1245 00a1 13       		.uleb128 0x13
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 23
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 23
 
 
  1246 00a2 00       		.byte	0
@@ -1378,7 +1378,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  1300 00d8 19       		.uleb128 0x19
  1301 00d9 11       		.uleb128 0x11
  1302 00da 01       		.uleb128 0x1
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 24
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 24
 
 
  1303 00db 12       		.uleb128 0x12
@@ -1438,7 +1438,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  1357 0115 55       		.uleb128 0x55
  1358 0116 17       		.uleb128 0x17
  1359 0117 01       		.uleb128 0x1
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 25
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 25
 
 
  1360 0118 13       		.uleb128 0x13
@@ -1498,7 +1498,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  1414 0153 00       		.byte	0
  1415 0154 00       		.byte	0
  1416 0155 1D       		.uleb128 0x1d
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 26
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 26
 
 
  1417 0156 34       		.uleb128 0x34
@@ -1558,7 +1558,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  1471 018c 01       		.byte	0x1
  1472 018d 3F       		.uleb128 0x3f
  1473 018e 19       		.uleb128 0x19
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 27
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 27
 
 
  1474 018f 03       		.uleb128 0x3
@@ -1618,7 +1618,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  1528 0065 0100     		.2byte	0x1
  1529 0067 50       		.byte	0x50
  1530 0068 0B000000 		.4byte	.LVL8-1
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 28
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 28
 
 
  1531 006c 14000000 		.4byte	.LFE123
@@ -1678,7 +1678,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  1585 00eb 51       		.byte	0x51
  1586 00ec 0B000000 		.4byte	.LVL10-1
  1587 00f0 14000000 		.4byte	.LFE124
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 29
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 29
 
 
  1588 00f4 0400     		.2byte	0x4
@@ -1738,7 +1738,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  1642 0054 18000000 		.4byte	.LFE122
  1643 0058 00000000 		.4byte	.LFB123
  1644 005c 14000000 		.4byte	.LFE123
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 30
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 30
 
 
  1645 0060 00000000 		.4byte	.LFB124
@@ -1798,7 +1798,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  1674              	.LASF9:
  1675 006a 5F5F7569 		.ascii	"__uint32_t\000"
  1675      6E743332 
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 31
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 31
 
 
  1675      5F7400
@@ -1858,7 +1858,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  1704              	.LASF27:
  1705 00f4 70657269 		.ascii	"period\000"
  1705      6F6400
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 32
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 32
 
 
  1706              	.LASF4:
@@ -1918,7 +1918,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  1727      20636861 
  1727      7200
  1728              	.LASF63:
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 33
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 33
 
 
  1729 0220 70776D5F 		.ascii	"pwm_lld_enable_channel\000"
@@ -1978,7 +1978,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  1751              	.LASF68:
  1752 02e0 70776D5F 		.ascii	"pwm_lld_init\000"
  1752      6C6C645F 
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 34
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 34
 
 
  1752      696E6974 
@@ -2038,7 +2038,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  1779              	.LASF49:
  1780 038b 64696572 		.ascii	"dier\000"
  1780      00
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 35
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 35
 
 
  1781              	.LASF55:
@@ -2077,25 +2077,25 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 1
  1796      6261636B 
  1796      00
  1797              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s 			page 36
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s 			page 36
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 pwm.c
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s:19     .text.pwmInit:0000000000000000 $t
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s:25     .text.pwmInit:0000000000000000 pwmInit
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s:40     .text.pwmObjectInit:0000000000000000 $t
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s:46     .text.pwmObjectInit:0000000000000000 pwmObjectInit
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s:67     .text.pwmStart:0000000000000000 $t
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s:73     .text.pwmStart:0000000000000000 pwmStart
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s:121    .text.pwmStop:0000000000000000 $t
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s:127    .text.pwmStop:0000000000000000 pwmStop
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s:170    .text.pwmChangePeriod:0000000000000000 $t
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s:176    .text.pwmChangePeriod:0000000000000000 pwmChangePeriod
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s:211    .text.pwmEnableChannel:0000000000000000 $t
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s:217    .text.pwmEnableChannel:0000000000000000 pwmEnableChannel
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s:252    .text.pwmDisableChannel:0000000000000000 $t
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccCMdxkF.s:258    .text.pwmDisableChannel:0000000000000000 pwmDisableChannel
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s:19     .text.pwmInit:0000000000000000 $t
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s:25     .text.pwmInit:0000000000000000 pwmInit
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s:40     .text.pwmObjectInit:0000000000000000 $t
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s:46     .text.pwmObjectInit:0000000000000000 pwmObjectInit
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s:67     .text.pwmStart:0000000000000000 $t
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s:73     .text.pwmStart:0000000000000000 pwmStart
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s:121    .text.pwmStop:0000000000000000 $t
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s:127    .text.pwmStop:0000000000000000 pwmStop
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s:170    .text.pwmChangePeriod:0000000000000000 $t
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s:176    .text.pwmChangePeriod:0000000000000000 pwmChangePeriod
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s:211    .text.pwmEnableChannel:0000000000000000 $t
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s:217    .text.pwmEnableChannel:0000000000000000 pwmEnableChannel
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s:252    .text.pwmDisableChannel:0000000000000000 $t
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdEUgts.s:258    .text.pwmDisableChannel:0000000000000000 pwmDisableChannel
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS
