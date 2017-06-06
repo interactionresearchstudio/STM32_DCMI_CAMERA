@@ -533,7 +533,12 @@ static void cmd_cam_send(BaseSequentialStream *chp, int argc, char *argv[]) {
 	 * Write text to the file.
 	 */
 
+	/*
+	 * In this loop, we should have an overflow condition - if we've reached
+	 * 100K, we're overflown, so we should return an error.
+	 */
 	uint16_t i;
+
 	for (i = 0; i < BUFFER_SIZE; i++) {
 		if ((ImageBuffer[i] == 0xFF) && (ImageBuffer[i + 1] == 0xD9)) {
 			/* Found END of JPEG Frame */
@@ -675,14 +680,18 @@ static void cmd_get_question(BaseSequentialStream *chp, int argc, char *argv[]) 
 	 * through UART.
 	 * Parameter - The question index.
 	 */
-	chprintf(chp, "Get question");
+	uint8_t questionIndex;
+	questionIndex = (AsciiToHex(argv[0][0]) << 4) ^ AsciiToHex(argv[0][1]);
+	chprintf(chp, "Get question " + argv[0][0] + argv[0][1]);
 }
 static void cmd_mark_question(BaseSequentialStream *chp, int argc, char *argv[]) {
 	/* Marks a question as answered in the questions file.
 	 * No returns.
 	 * Parameter - The question index.
 	 */
-	chprintf(chp, "Mark question");
+	uint8_t questionIndex;
+	questionIndex = (AsciiToHex(argv[0][0]) << 4) ^ AsciiToHex(argv[0][1]);
+	chprintf(chp, "Mark question " + argv[0][0] + argv[0][1]);
 }
 
 static uint8_t AsciiToHex(char c) {

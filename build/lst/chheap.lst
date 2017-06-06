@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
   55 001c AFF30080 		.section	.text.chHeapInit,"ax",%progbits
   56              		.align	2
   57              		.p2align 4,,15
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 2
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 2
 
 
   58              		.global	chHeapInit
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  110              		.cfi_def_cfa_offset 24
  111              		.cfi_offset 3, -24
  112              		.cfi_offset 4, -20
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 3
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 3
 
 
  113              		.cfi_offset 5, -16
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  167              		.loc 1 175 0
  168 003e 4560     		str	r5, [r0, #4]
  169              	.LVL17:
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 4
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 4
 
 
  170              		.loc 1 177 0
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  224              		.align	2
  225              	.L21:
  226 007c 00000000 		.word	.LANCHOR0
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 5
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 5
 
 
  227              		.cfi_endproc
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  281 0024 FAD1     		bne	.L35
  282              	.L24:
  283              		.loc 1 211 0 is_stmt 1 discriminator 1
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 6
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 6
 
 
  284 0026 1A68     		ldr	r2, [r3]
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  338              	.L37:
  339              		.loc 1 223 0
  340 007a 56F8040C 		ldr	r0, [r6, #-4]
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 7
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 7
 
 
  341              		.loc 1 224 0
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  392 0016 6BB1     		cbz	r3, .L44
  393              		.loc 1 259 0
  394 0018 0022     		movs	r2, #0
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 8
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 8
 
 
  395              		.loc 1 260 0
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  445      00000000 
  446              		.text
  447              	.Letext0:
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 9
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 9
 
 
  448              		.file 2 "/Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/lib/gcc/arm-none-eabi/4
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  502 005e 04       		.uleb128 0x4
  503 005f 02       		.byte	0x2
  504 0060 07       		.byte	0x7
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 10
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 10
 
 
  505 0061 29010000 		.4byte	.LASF6
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  559 00d0 02       		.byte	0x2
  560 00d1 F6010000 		.4byte	.LASF18
  561 00d5 03       		.uleb128 0x3
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 11
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 11
 
 
  562 00d6 70010000 		.4byte	.LASF19
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  616 014b 56020000 		.4byte	0x256
  617 014f 00       		.byte	0
  618 0150 06       		.uleb128 0x6
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 12
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 12
 
 
  619 0151 E7010000 		.4byte	.LASF29
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  673 01bd 13030000 		.4byte	.LASF38
  674 01c1 07       		.byte	0x7
  675 01c2 88       		.byte	0x88
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 13
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 13
 
 
  676 01c3 F6000000 		.4byte	0xf6
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  730 022f 92020000 		.4byte	0x292
  731 0233 44       		.byte	0x44
  732 0234 00       		.byte	0
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 14
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 14
 
 
  733 0235 08       		.uleb128 0x8
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  787 029b C3000000 		.4byte	0xc3
  788 029f 0B       		.uleb128 0xb
  789 02a0 EF030000 		.4byte	.LASF51
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 15
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 15
 
 
  790 02a4 24       		.byte	0x24
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  844 0312 08       		.byte	0x8
  845 0313 2701     		.2byte	0x127
  846 0315 87020000 		.4byte	0x287
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 16
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 16
 
 
  847 0319 20       		.byte	0x20
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  901 0384 09       		.byte	0x9
  902 0385 33       		.byte	0x33
  903 0386 48030000 		.4byte	0x348
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 17
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 17
 
 
  904 038a 03       		.uleb128 0x3
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  958 03f9 11       		.uleb128 0x11
  959 03fa 9E030000 		.4byte	.LASF65
  960 03fe 0B       		.byte	0xb
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 18
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 18
 
 
  961 03ff 3E       		.byte	0x3e
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  1015 0464 11       		.uleb128 0x11
  1016 0465 4B000000 		.4byte	.LASF69
  1017 0469 07       		.byte	0x7
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 19
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 19
 
 
  1018 046a A4       		.byte	0xa4
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  1072 04dc 18       		.uleb128 0x18
  1073 04dd 5B000000 		.4byte	.LASF75
  1074 04e1 01       		.byte	0x1
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 20
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 20
 
 
  1075 04e2 63       		.byte	0x63
@@ -1198,7 +1198,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  1129 0559 84       		.byte	0x84
  1130 055a 2C000000 		.4byte	0x2c
  1131 055e BC000000 		.4byte	.LLST5
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 21
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 21
 
 
  1132 0562 1A       		.uleb128 0x1a
@@ -1258,7 +1258,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  1186 05d4 37060000 		.4byte	0x637
  1187 05d8 19       		.uleb128 0x19
  1188 05d9 7000     		.ascii	"p\000"
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 22
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 22
 
 
  1189 05db 01       		.byte	0x1
@@ -1318,7 +1318,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  1243 0657 2C040000 		.4byte	0x42c
  1244 065b 5F020000 		.4byte	.LLST13
  1245 065f 18       		.uleb128 0x18
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 23
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 23
 
 
  1246 0660 21040000 		.4byte	.LASF79
@@ -1378,7 +1378,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  1300 06d7 0F       		.uleb128 0xf
  1301 06d8 98040000 		.4byte	0x498
  1302 06dc 00       		.byte	0
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 24
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 24
 
 
  1303 06dd 22       		.uleb128 0x22
@@ -1438,7 +1438,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  1357 0026 0B       		.uleb128 0xb
  1358 0027 49       		.uleb128 0x49
  1359 0028 13       		.uleb128 0x13
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 25
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 25
 
 
  1360 0029 00       		.byte	0
@@ -1498,7 +1498,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  1414 005f 38       		.uleb128 0x38
  1415 0060 0B       		.uleb128 0xb
  1416 0061 00       		.byte	0
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 26
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 26
 
 
  1417 0062 00       		.byte	0
@@ -1558,7 +1558,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  1471 0098 49       		.uleb128 0x49
  1472 0099 13       		.uleb128 0x13
  1473 009a 38       		.uleb128 0x38
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 27
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 27
 
 
  1474 009b 0B       		.uleb128 0xb
@@ -1618,7 +1618,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  1528 00d1 12       		.uleb128 0x12
  1529 00d2 17       		.uleb128 0x17
  1530 00d3 01       		.byte	0x1
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 28
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 28
 
 
  1531 00d4 03       		.uleb128 0x3
@@ -1678,7 +1678,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  1585 010b 13       		.uleb128 0x13
  1586 010c 00       		.byte	0
  1587 010d 00       		.byte	0
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 29
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 29
 
 
  1588 010e 16       		.uleb128 0x16
@@ -1738,7 +1738,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  1642 014a 08       		.uleb128 0x8
  1643 014b 3A       		.uleb128 0x3a
  1644 014c 0B       		.uleb128 0xb
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 30
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 30
 
 
  1645 014d 3B       		.uleb128 0x3b
@@ -1798,7 +1798,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  1699 0188 00       		.byte	0
  1700 0189 1E       		.uleb128 0x1e
  1701 018a 898201   		.uleb128 0x4109
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 31
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 31
 
 
  1702 018d 01       		.byte	0x1
@@ -1858,7 +1858,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  1756 01c6 0E       		.uleb128 0xe
  1757 01c7 3A       		.uleb128 0x3a
  1758 01c8 0B       		.uleb128 0xb
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 32
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 32
 
 
  1759 01c9 3B       		.uleb128 0x3b
@@ -1918,7 +1918,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  1813 0032 13000000 		.4byte	.LVL5-1
  1814 0036 0100     		.2byte	0x1
  1815 0038 51       		.byte	0x51
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 33
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 33
 
 
  1816 0039 13000000 		.4byte	.LVL5-1
@@ -1978,7 +1978,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  1870              	.LLST5:
  1871 00bc 00000000 		.4byte	.LVL6
  1872 00c0 0C000000 		.4byte	.LVL8
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 34
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 34
 
 
  1873 00c4 0100     		.2byte	0x1
@@ -2038,7 +2038,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  1927 0151 0300     		.2byte	0x3
  1928 0153 74       		.byte	0x74
  1929 0154 78       		.sleb128 -8
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 35
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 35
 
 
  1930 0155 9F       		.byte	0x9f
@@ -2098,7 +2098,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  1984 01df 0100     		.2byte	0x1
  1985 01e1 53       		.byte	0x53
  1986 01e2 5E000000 		.4byte	.LVL38
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 36
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 36
 
 
  1987 01e6 91000000 		.4byte	.LVL40-1
@@ -2158,7 +2158,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  2041 0263 0A000000 		.4byte	.LVL42
  2042 0267 0100     		.2byte	0x1
  2043 0269 50       		.byte	0x50
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 37
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 37
 
 
  2044 026a 0A000000 		.4byte	.LVL42
@@ -2218,7 +2218,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  2098 02d7 55       		.byte	0x55
  2099 02d8 00000000 		.4byte	0
  2100 02dc 00000000 		.4byte	0
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 38
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 38
 
 
  2101              	.LLST15:
@@ -2278,7 +2278,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  2155 033c 00000000 		.4byte	0
  2156              	.LLST16:
  2157 0340 14000000 		.4byte	.LVL43
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 39
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 39
 
 
  2158 0344 1C000000 		.4byte	.LVL44
@@ -2338,7 +2338,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  2212 0020 00000000 		.4byte	.LFB9
  2213 0024 80000000 		.4byte	.LFE9-.LFB9
  2214 0028 00000000 		.4byte	.LFB10
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 40
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 40
 
 
  2215 002c 92000000 		.4byte	.LFE10-.LFB10
@@ -2398,7 +2398,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  2251              	.LASF69:
  2252 004b 65786974 		.ascii	"exitcode\000"
  2252      636F6465 
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 41
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 41
 
 
  2252      00
@@ -2458,7 +2458,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  2282      00
  2283              	.LASF32:
  2284 00db 705F6E65 		.ascii	"p_newer\000"
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 42
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 42
 
 
  2284      77657200 
@@ -2518,7 +2518,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  2310      6B5F7400 
  2311              	.LASF54:
  2312 0190 4D757465 		.ascii	"Mutex\000"
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 43
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 43
 
 
  2312      7800
@@ -2578,7 +2578,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  2342 021d 474E5520 		.ascii	"GNU C 4.8.3 20140228 (release) [ARM/embedded-4_8-br"
  2342      4320342E 
  2342      382E3320 
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 44
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 44
 
 
  2342      32303134 
@@ -2638,7 +2638,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  2366      6170416C 
  2366      6C6F6300 
  2367              	.LASF85:
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 45
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 45
 
 
  2368 0352 2F557365 		.ascii	"/Users/mikevanis/Documents/workspace/STM32_DCMI_CAM"
@@ -2698,7 +2698,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  2395      67717565 
  2395      756500
  2396              	.LASF81:
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 46
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 46
 
 
  2397 0401 63684D74 		.ascii	"chMtxInit\000"
@@ -2738,28 +2738,28 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 1
  2417      72795F68 
  2417      65617000 
  2418              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s 			page 47
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s 			page 47
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 chheap.c
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s:19     .text._heap_init:0000000000000000 $t
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s:25     .text._heap_init:0000000000000000 _heap_init
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s:50     .text._heap_init:0000000000000014 $d
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s:56     .text.chHeapInit:0000000000000000 $t
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s:62     .text.chHeapInit:0000000000000000 chHeapInit
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s:96     .text.chHeapAlloc:0000000000000000 $t
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s:102    .text.chHeapAlloc:0000000000000000 chHeapAlloc
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s:226    .text.chHeapAlloc:000000000000007c $d
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s:231    .text.chHeapFree:0000000000000000 $t
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s:237    .text.chHeapFree:0000000000000000 chHeapFree
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s:358    .text.chHeapStatus:0000000000000000 $t
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s:364    .text.chHeapStatus:0000000000000000 chHeapStatus
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s:435    .text.chHeapStatus:000000000000003c $d
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s:440    .bss.default_heap:0000000000000000 $d
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s:444    .bss.default_heap:0000000000000000 default_heap
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s:19     .text._heap_init:0000000000000000 $t
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s:25     .text._heap_init:0000000000000000 _heap_init
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s:50     .text._heap_init:0000000000000014 $d
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s:56     .text.chHeapInit:0000000000000000 $t
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s:62     .text.chHeapInit:0000000000000000 chHeapInit
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s:96     .text.chHeapAlloc:0000000000000000 $t
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s:102    .text.chHeapAlloc:0000000000000000 chHeapAlloc
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s:226    .text.chHeapAlloc:000000000000007c $d
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s:231    .text.chHeapFree:0000000000000000 $t
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s:237    .text.chHeapFree:0000000000000000 chHeapFree
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s:358    .text.chHeapStatus:0000000000000000 $t
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s:364    .text.chHeapStatus:0000000000000000 chHeapStatus
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s:435    .text.chHeapStatus:000000000000003c $d
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s:440    .bss.default_heap:0000000000000000 $d
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s:444    .bss.default_heap:0000000000000000 default_heap
                      .debug_frame:0000000000000010 $d
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccoJoRRA.s:55     .text._heap_init:000000000000001c $t
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccdAwwJy.s:55     .text._heap_init:000000000000001c $t
 
 UNDEFINED SYMBOLS
 chMtxInit

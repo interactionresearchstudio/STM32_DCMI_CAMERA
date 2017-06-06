@@ -7,8 +7,8 @@ start address 0x08000311
 
 Program Header:
     LOAD off    0x00008000 vaddr 0x08000000 paddr 0x08000000 align 2**15
-         filesz 0x00007b34 memsz 0x00007b38 flags rwx
-    LOAD off    0x00010800 vaddr 0x20000800 paddr 0x08007b38 align 2**15
+         filesz 0x00007b54 memsz 0x00007b58 flags rwx
+    LOAD off    0x00010800 vaddr 0x20000800 paddr 0x08007b58 align 2**15
          filesz 0x00000054 memsz 0x00000054 flags rw-
     LOAD off    0x00018000 vaddr 0x20000000 paddr 0x20000000 align 2**15
          filesz 0x00000000 memsz 0x00019658 flags rw-
@@ -18,40 +18,40 @@ Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
   0 startup       000001ac  08000000  08000000  00008000  2**4
                   CONTENTS, ALLOC, LOAD, DATA
-  1 .text         00007984  080001b0  080001b0  000081b0  2**4
+  1 .text         000079a4  080001b0  080001b0  000081b0  2**4
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .textalign    00000004  08007b34  08007b34  0000fb34  2**0
+  2 .textalign    00000004  08007b54  08007b54  0000fb54  2**0
                   ALLOC
   3 .stacks       00000800  20000000  20000000  00018000  2**0
                   ALLOC
-  4 .data         00000054  20000800  08007b38  00010800  2**2
+  4 .data         00000054  20000800  08007b58  00010800  2**2
                   CONTENTS, ALLOC, LOAD, DATA
   5 .bss          00018e04  20000854  20000854  00018000  2**3
                   ALLOC
-  6 .debug_info   00021bab  00000000  00000000  00010854  2**0
+  6 .debug_info   00021bb1  00000000  00000000  00010854  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 000064ae  00000000  00000000  000323ff  2**0
+  7 .debug_abbrev 000064ae  00000000  00000000  00032405  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_loc    0000e25d  00000000  00000000  000388ad  2**0
+  8 .debug_loc    0000e25d  00000000  00000000  000388b3  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_aranges 00000f90  00000000  00000000  00046b0a  2**0
+  9 .debug_aranges 00000f90  00000000  00000000  00046b10  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_ranges 00001ce8  00000000  00000000  00047a9a  2**0
+ 10 .debug_ranges 00001ce8  00000000  00000000  00047aa0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_line   0000ad0f  00000000  00000000  00049782  2**0
+ 11 .debug_line   0000ad11  00000000  00000000  00049788  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_str    00003c10  00000000  00000000  00054491  2**0
+ 12 .debug_str    00003c1e  00000000  00000000  00054499  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .comment      00000070  00000000  00000000  000580a1  2**0
+ 13 .comment      00000070  00000000  00000000  000580b7  2**0
                   CONTENTS, READONLY
- 14 .ARM.attributes 00000033  00000000  00000000  00058111  2**0
+ 14 .ARM.attributes 00000033  00000000  00000000  00058127  2**0
                   CONTENTS, READONLY
- 15 .debug_frame  00002b48  00000000  00000000  00058144  2**2
+ 15 .debug_frame  00002b48  00000000  00000000  0005815c  2**2
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 08000000 l    d  startup	00000000 startup
 080001b0 l    d  .text	00000000 .text
-08007b34 l    d  .textalign	00000000 .textalign
+08007b54 l    d  .textalign	00000000 .textalign
 20000000 l    d  .stacks	00000000 .stacks
 20000800 l    d  .data	00000000 .data
 20000854 l    d  .bss	00000000 .bss
@@ -68,45 +68,45 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 vectors.c
 00000000 l    df *ABS*	00000000 main.c
 08005ae0 l     F .text	0000001c chprintf
-08005b00 l     F .text	0000000c cmd_mark_question
-08005b10 l     F .text	0000000c cmd_get_question
-08005b20 l     F .text	0000000c cmd_get_total_questions
-08005b30 l     F .text	0000000c cmd_index_questions
-08005b40 l     F .text	000000c8 cmd_cam_status
-08005c10 l     F .text	00000090 cmd_cam_id
-08005ca0 l     F .text	000000a0 cmd_cam_send
-08005d40 l     F .text	0000004c cmd_cam_reset
-08005d90 l     F .text	00000054 cmd_cam_off
-08005df0 l     F .text	00000038 Thread1
-08005e30 l     F .text	00000068 cmd_cam_capture
-08005ea0 l     F .text	00000040 cmd_cam_on
-08005ee0 l     F .text	0000017c cmd_cam_init
-08006060 l     F .text	00000070 tmrfunc
-080060d0 l     F .text	00000018 RemoveHandler
-080060f0 l     F .text	0000008a AsciiToHex
-08006180 l     F .text	00000078 cmd_cam_reg_read
-08006200 l     F .text	0000008c cmd_cam_reg_write
-08006290 l     F .text	00000068 cmd_threads
-08006300 l     F .text	00000054 cmd_mem
-08006360 l     F .text	00000034 InsertHandler
-08007010 l     O .text	0000004e ov2640_1024x768_regs
-08007060 l     O .text	00000006 ov2640_reset_regs
-08007070 l     O .text	0000003c states.7367
+08005b00 l     F .text	00000014 cmd_mark_question
+08005b20 l     F .text	00000014 cmd_get_question
+08005b40 l     F .text	0000000c cmd_get_total_questions
+08005b50 l     F .text	0000000c cmd_index_questions
+08005b60 l     F .text	000000c8 cmd_cam_status
+08005c30 l     F .text	00000090 cmd_cam_id
+08005cc0 l     F .text	000000a0 cmd_cam_send
+08005d60 l     F .text	0000004c cmd_cam_reset
+08005db0 l     F .text	00000054 cmd_cam_off
+08005e10 l     F .text	00000038 Thread1
+08005e50 l     F .text	00000068 cmd_cam_capture
+08005ec0 l     F .text	00000040 cmd_cam_on
+08005f00 l     F .text	0000017c cmd_cam_init
+08006080 l     F .text	00000070 tmrfunc
+080060f0 l     F .text	00000018 RemoveHandler
+08006110 l     F .text	0000008a AsciiToHex
+080061a0 l     F .text	00000078 cmd_cam_reg_read
+08006220 l     F .text	0000008c cmd_cam_reg_write
+080062b0 l     F .text	00000068 cmd_threads
+08006320 l     F .text	00000054 cmd_mem
+08006380 l     F .text	00000034 InsertHandler
+08007030 l     O .text	0000004e ov2640_1024x768_regs
+08007080 l     O .text	00000006 ov2640_reset_regs
+08007090 l     O .text	0000003c states.7367
 20000e08 l     O .bss	00000004 removed_event
-080070b0 l     O .text	0000017e ov2640_jpeg_init_regs
-08007230 l     O .text	0000000c dcmicfg
-08007240 l     O .text	00000012 ov2640_jpeg_regs
+080070d0 l     O .text	0000017e ov2640_jpeg_init_regs
+08007250 l     O .text	0000000c dcmicfg
+08007260 l     O .text	00000012 ov2640_jpeg_regs
 200194e4 l     O .bss	00000004 inserted_event
-08007260 l     O .text	00000006 ov2640_autolight
-08007270 l     O .text	00000014 ov2640_yuv422_regs
+08007280 l     O .text	00000006 ov2640_autolight
+08007290 l     O .text	00000014 ov2640_yuv422_regs
 200194ea l     O .bss	00000001 fs_ready
 2000082c l     O .data	0000000c hs_spicfg
 200194ec l     O .bss	00000014 tmr
-08007290 l     O .text	00000088 commands
-08007320 l     O .text	00000008 evhndl.7350
+080072b0 l     O .text	00000088 commands
+08007340 l     O .text	00000008 evhndl.7350
 20019504 l     O .bss	00000004 cnt
-08007330 l     O .text	00000008 shell_cfg1
-08007340 l     O .text	0000000e ov2640_normal
+08007350 l     O .text	00000008 shell_cfg1
+08007360 l     O .text	0000000e ov2640_normal
 20000838 l     O .data	0000000c mmccfg
 20000844 l     O .data	0000000c ls_spicfg
 20019508 l     O .bss	00000150 waThread1
@@ -146,11 +146,11 @@ SYMBOL TABLE:
 08001900 l     F .text	00000036 sync.isra.2
 08001b00 l     F .text	00000034 mmc_read
 08001c50 l     F .text	00000034 mmc_write
-080064b0 l     O .text	00000007 stopcmd.7416
-080064c0 l     O .text	00000002 stop.7430
-080064d0 l     O .text	00000100 crc7_lookup_table
-080065d0 l     O .text	00000020 mmc_vmt
-080065f0 l     O .text	00000002 start.7425
+080064d0 l     O .text	00000007 stopcmd.7416
+080064e0 l     O .text	00000002 stop.7430
+080064f0 l     O .text	00000100 crc7_lookup_table
+080065f0 l     O .text	00000020 mmc_vmt
+08006610 l     O .text	00000002 start.7425
 00000000 l    df *ABS*	00000000 mmcsd.c
 00000000 l    df *ABS*	00000000 pwm.c
 00000000 l    df *ABS*	00000000 serial.c
@@ -162,7 +162,7 @@ SYMBOL TABLE:
 08001d90 l     F .text	0000000a get
 08001da0 l     F .text	00000006 putt
 08001db0 l     F .text	0000000a put
-08006600 l     O .text	00000020 vmt
+08006620 l     O .text	00000020 vmt
 00000000 l    df *ABS*	00000000 spi.c
 00000000 l    df *ABS*	00000000 dcmi.c
 00000000 l    df *ABS*	00000000 stm32_dma.c
@@ -185,7 +185,7 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 pwm_lld.c
 00000000 l    df *ABS*	00000000 serial_lld.c
 08003630 l     F .text	00000014 notify2
-080066e0 l     O .text	0000000c default_config
+08006700 l     O .text	0000000c default_config
 00000000 l    df *ABS*	00000000 board.c
 00000000 l    df *ABS*	00000000 fatfs_diskio.c
 00000000 l    df *ABS*	00000000 fatfs_syscall.c
@@ -207,13 +207,13 @@ SYMBOL TABLE:
 080045b0 l     F .text	000002dc follow_path
 08004940 l     F .text	00000238 dir_register
 20000bc0 l     O .bss	00000002 Fsid
-08006810 l     O .text	0000000d LfnOfs
+08006830 l     O .text	0000000d LfnOfs
 20000bc4 l     O .bss	00000004 FatFs
-08006820 l     O .text	00000080 excvt.5254
+08006840 l     O .text	00000080 excvt.5254
 00000000 l    df *ABS*	00000000 ccsbcs.c
-080068a0 l     O .text	00000100 Tbl
-080069a0 l     O .text	000001e0 tbl_lower.4997
-08006b80 l     O .text	000001e0 tbl_upper.4998
+080068c0 l     O .text	00000100 Tbl
+080069c0 l     O .text	000001e0 tbl_lower.4997
+08006ba0 l     O .text	000001e0 tbl_upper.4998
 00000000 l    df *ABS*	00000000 shell.c
 08005180 l     F .text	0000001c chprintf
 080051a0 l     F .text	00000028 cmd_systime
@@ -225,15 +225,15 @@ SYMBOL TABLE:
 08005560 l     F .text	0000004a long_to_string_with_divisor.constprop.0
 00000000 l    df *ABS*	00000000 SCCB.c
 00000000 l    df *ABS*	00000000 hwinit.c
-08006fc0 l     O .text	00000034 pwmcfg
-08007000 l     O .text	0000000c i2cfg1
+08006fe0 l     O .text	00000034 pwmcfg
+08007020 l     O .text	0000000c i2cfg1
 00000000 l    df *ABS*	00000000 OV2640.c
 00000000 l    df *ABS*	00000000 strcasecmp.c
 00000000 l    df *ABS*	00000000 strpbrk.c
 00000000 l    df *ABS*	00000000 strspn.c
 00000000 l    df *ABS*	00000000 ctype_.c
 00000000 l    df *ABS*	00000000 
-08007b38 l       .stacks	00000000 _etext
+08007b58 l       .stacks	00000000 _etext
 00000000 l       *UND*	00000000 msObjectInit
 0001c000 l       *ABS*	00000000 __ram_size__
 00000000 l       startup	00000000 _text
@@ -242,7 +242,7 @@ SYMBOL TABLE:
 20019658 l       .bss	00000000 _end
 00000400 l       *ABS*	00000000 __main_stack_size__
 00000400 l       *ABS*	00000000 __process_stack_size__
-080066f0 g     O .text	000000fc pal_default_config
+08006710 g     O .text	000000fc pal_default_config
 08000410  w    F .text	00000002 Vector58
 08000410  w    F .text	00000002 VectorE8
 08000410  w    F .text	00000002 Vector9C
@@ -378,7 +378,7 @@ SYMBOL TABLE:
 08002610 g     F .text	00000060 Vector178
 08000b40 g     F .text	00000018 chThdSleep
 08001020 g     F .text	0000001e chIQInit
-08006620 g     O .text	000000c0 _stm32_dma_streams
+08006640 g     O .text	000000c0 _stm32_dma_streams
 08002150 g     F .text	0000002c Vector84
 20000bcc g     O .bss	00000234 MMC_FS
 08000500 g     F .text	0000001a SysTickVector
@@ -408,7 +408,7 @@ SYMBOL TABLE:
 08000520 g     F .text	00000010 _port_switch
 080039c0 g     F .text	0000001c ff_cre_syncobj
 08000440 g     F .text	00000012 SVCallVector
-080063a0 g     F .text	00000044 strcasecmp
+080063c0 g     F .text	00000044 strcasecmp
 080002f0  w    F .text	00000002 __late_init
 080019d0 g     F .text	00000018 mmcObjectInit
 08003230 g     F .text	00000050 spi_lld_stop
@@ -428,7 +428,7 @@ SYMBOL TABLE:
 08000410  w    F .text	00000002 Vector13C
 08000410  w    F .text	00000002 Vector100
 08001fa0 g     F .text	00000004 dcmiInit
-08007b38 g       .stacks	00000000 _textdata
+08007b58 g       .stacks	00000000 _textdata
 08000410  w    F .text	00000002 VectorE0
 080039b0 g     F .text	00000006 get_fattime
 08000410  w    F .text	00000002 VectorF4
@@ -459,7 +459,7 @@ SYMBOL TABLE:
 08001230 g     F .text	00000076 chOQWriteTimeout
 08001cf0 g     F .text	0000000a pwmObjectInit
 08000410  w    F .text	00000002 VectorB0
-08006490 g     O .text	00000016 ch_debug
+080064b0 g     O .text	00000016 ch_debug
 08000410  w    F .text	00000002 Vector90
 08000f30 g     F .text	0000002e chEvtSignalI
 08000fb0 g     F .text	0000003c chEvtWaitOne
@@ -533,12 +533,12 @@ SYMBOL TABLE:
 20000850 g     O .data	00000004 __ctype_ptr__
 08000410  w    F .text	00000002 Vector184
 08000410  w    F .text	00000002 Vector10C
-08007a30 g     O .text	00000101 _ctype_
+08007a50 g     O .text	00000101 _ctype_
 080001ac g       startup	00000000 __init_array_start
 080019f0 g     F .text	00000008 mmcStart
 08001e90 g     F .text	0000001c spiStart
 08000410  w    F .text	00000002 Vector14C
-08006440 g     F .text	0000003e strspn
+08006460 g     F .text	0000003e strspn
 080009f0 g     F .text	00000050 _thread_init
 08000410  w    F .text	00000002 Vector50
 080057f0 g     F .text	00000048 SCCB_Write
@@ -568,7 +568,7 @@ SYMBOL TABLE:
 08002210 g     F .text	0000002c Vector128
 08003380 g     F .text	00000024 VectorA4
 08001a60 g     F .text	00000060 mmcSequentialRead
-080063f0 g     F .text	00000050 strpbrk
+08006410 g     F .text	00000050 strpbrk
 08000410  w    F .text	00000002 Vector20
 08003a20 g     F .text	00000008 ff_memalloc
 08000410  w    F .text	00000002 Vector18C

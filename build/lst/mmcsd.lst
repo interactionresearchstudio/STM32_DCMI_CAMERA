@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 1
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//cck9kRuX.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 1
   55              		.loc 1 112 0
   56 0016 0130     		adds	r0, r0, #1
   57 0018 8002     		lsls	r0, r0, #10
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 2
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//cck9kRuX.s 			page 2
 
 
   58 001a 7047     		bx	lr
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 1
  110      0080AFF3 
  110      0080
  111              	.Letext0:
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 3
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//cck9kRuX.s 			page 3
 
 
  112              		.file 2 "/Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/arm-none-eabi/include/m
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 1
  166 0068 6C000000 		.4byte	0x6c
  167 006c 03       		.uleb128 0x3
  168 006d 04       		.byte	0x4
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 4
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//cck9kRuX.s 			page 4
 
 
  169 006e 07       		.byte	0x7
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 1
  223 00dd 45       		.byte	0x45
  224 00de 8C000000 		.4byte	0x8c
  225 00e2 09       		.uleb128 0x9
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 5
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//cck9kRuX.s 			page 5
 
 
  226 00e3 66000000 		.4byte	.LASF18
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 1
  280 0158 67       		.byte	0x67
  281 0159 8C000000 		.4byte	0x8c
  282 015d 0F       		.uleb128 0xf
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 6
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//cck9kRuX.s 			page 6
 
 
  283 015e B1000000 		.4byte	0xb1
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 1
  337 01f1 14       		.uleb128 0x14
  338 01f2 ED000000 		.4byte	0xed
  339 01f6 02       		.byte	0x2
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 7
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//cck9kRuX.s 			page 7
 
 
  340 01f7 14       		.uleb128 0x14
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 1
  394 0270 C1000000 		.4byte	0xc1
  395 0274 10010000 		.4byte	.LLST9
  396 0278 11       		.uleb128 0x11
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 8
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//cck9kRuX.s 			page 8
 
 
  397 0279 34000000 		.4byte	.LBB19
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 1
  451 001c 00       		.byte	0
  452 001d 00       		.byte	0
  453 001e 03       		.uleb128 0x3
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 9
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//cck9kRuX.s 			page 9
 
 
  454 001f 24       		.uleb128 0x24
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 1
  508 0055 3A       		.uleb128 0x3a
  509 0056 0B       		.uleb128 0xb
  510 0057 3B       		.uleb128 0x3b
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 10
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//cck9kRuX.s 			page 10
 
 
  511 0058 0B       		.uleb128 0xb
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 1
  565 008e 13       		.uleb128 0x13
  566 008f 11       		.uleb128 0x11
  567 0090 01       		.uleb128 0x1
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 11
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//cck9kRuX.s 			page 11
 
 
  568 0091 12       		.uleb128 0x12
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 1
  622 00c8 58       		.uleb128 0x58
  623 00c9 0B       		.uleb128 0xb
  624 00ca 59       		.uleb128 0x59
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 12
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//cck9kRuX.s 			page 12
 
 
  625 00cb 0B       		.uleb128 0xb
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 1
  679 0101 13       		.uleb128 0x13
  680 0102 1C       		.uleb128 0x1c
  681 0103 05       		.uleb128 0x5
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 13
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//cck9kRuX.s 			page 13
 
 
  682 0104 00       		.byte	0
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 1
  736 0015 F3       		.byte	0xf3
  737 0016 01       		.uleb128 0x1
  738 0017 50       		.byte	0x50
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 14
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//cck9kRuX.s 			page 14
 
 
  739 0018 9F       		.byte	0x9f
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 1
  793 0095 9F       		.byte	0x9f
  794 0096 00000000 		.4byte	0
  795 009a 00000000 		.4byte	0
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 15
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//cck9kRuX.s 			page 15
 
 
  796              	.LLST4:
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 1
  850 0123 0400     		.2byte	0x4
  851 0125 F3       		.byte	0xf3
  852 0126 01       		.uleb128 0x1
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 16
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//cck9kRuX.s 			page 16
 
 
  853 0127 50       		.byte	0x50
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 1
  892      7400
  893              	.LASF19:
  894 0056 656E6469 		.ascii	"endidx\000"
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 17
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//cck9kRuX.s 			page 17
 
 
  894      647800
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 1
  919              	.LASF10:
  920 00e9 6C6F6E67 		.ascii	"long long unsigned int\000"
  920      206C6F6E 
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 18
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//cck9kRuX.s 			page 18
 
 
  920      6720756E 
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 1
  942      2D6D7468 
  942      756D6220 
  942      2D676764 
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 19
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//cck9kRuX.s 			page 19
 
 
  943 0213 69676E2D 		.ascii	"ign-functions=16 -ffunction-sections -fdata-section"
@@ -1091,13 +1091,13 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 1
  944      6F6D6D6F 
  944      6E00
  945              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s 			page 20
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//cck9kRuX.s 			page 20
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 mmcsd.c
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s:19     .text.mmcsdGetCapacity:0000000000000000 $t
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccryMTOB.s:25     .text.mmcsdGetCapacity:0000000000000000 mmcsdGetCapacity
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//cck9kRuX.s:19     .text.mmcsdGetCapacity:0000000000000000 $t
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//cck9kRuX.s:25     .text.mmcsdGetCapacity:0000000000000000 mmcsdGetCapacity
                      .debug_frame:0000000000000010 $d
 
 NO UNDEFINED SYMBOLS
