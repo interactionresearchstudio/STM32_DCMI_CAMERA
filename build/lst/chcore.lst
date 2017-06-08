@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccN3PZnf.s 			page 1
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccm6hobX.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccN3PZnf.s 			page 1
   53 0010 01       		.byte	0x1
   54 0011 65000000 		.4byte	.LASF13
   55 0015 1B000000 		.4byte	.LASF14
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccN3PZnf.s 			page 2
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccm6hobX.s 			page 2
 
 
   56 0019 00000000 		.4byte	.Ldebug_ranges0+0
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccN3PZnf.s 			page 1
  110 007c BE000000 		.4byte	.LASF11
  111 0080 04       		.uleb128 0x4
  112 0081 F1000000 		.4byte	.LASF15
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccN3PZnf.s 			page 3
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccm6hobX.s 			page 3
 
 
  113 0085 01       		.byte	0x1
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccN3PZnf.s 			page 1
  167 002d 19       		.uleb128 0x19
  168 002e 03       		.uleb128 0x3
  169 002f 0E       		.uleb128 0xe
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccN3PZnf.s 			page 4
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccm6hobX.s 			page 4
 
 
  170 0030 3A       		.uleb128 0x3a
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccN3PZnf.s 			page 1
  213      72732F6D 
  213      696B6576 
  213      616E6973 
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccN3PZnf.s 			page 5
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccm6hobX.s 			page 5
 
 
  213      2F446F63 
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccN3PZnf.s 			page 1
  237      7400
  238              	.LASF10:
  239 0105 73697A65 		.ascii	"sizetype\000"
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccN3PZnf.s 			page 6
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccm6hobX.s 			page 6
 
 
  239      74797065 
@@ -329,13 +329,13 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccN3PZnf.s 			page 1
  245      6F6D6D6F 
  245      6E00
  246              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccN3PZnf.s 			page 7
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccm6hobX.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 chcore.c
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccN3PZnf.s:19     .text.port_halt:0000000000000000 $t
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccN3PZnf.s:25     .text.port_halt:0000000000000000 port_halt
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccm6hobX.s:19     .text.port_halt:0000000000000000 $t
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccm6hobX.s:25     .text.port_halt:0000000000000000 port_halt
                      .debug_frame:0000000000000010 $d
 
 NO UNDEFINED SYMBOLS

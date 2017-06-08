@@ -150,12 +150,12 @@ uint16_t questionPositions[MAXQUESTIONS];
 static void cmd_mem(BaseSequentialStream *chp, int argc, char *argv[]);
 static void cmd_threads(BaseSequentialStream *chp, int argc, char *argv[]);
 static void cmd_cam_id(BaseSequentialStream *chp, int argc, char *argv[]);
-static void cmd_cam_init(BaseSequentialStream *chp, int argc, char *argv[]);
-static void cmd_cam_on(BaseSequentialStream *chp, int argc, char *argv[]);
+static void cmd_cam_init(BaseSequentialStream *chp, int argc, char *argv[]); // -
+static void cmd_cam_on(BaseSequentialStream *chp, int argc, char *argv[]); // -
 static void cmd_cam_off(BaseSequentialStream *chp, int argc, char *argv[]);
 static void cmd_cam_reset(BaseSequentialStream *chp, int argc, char *argv[]);
-static void cmd_cam_capture(BaseSequentialStream *chp, int argc, char *argv[]);
-static void cmd_cam_send(BaseSequentialStream *chp, int argc, char *argv[]);
+static void cmd_cam_capture(BaseSequentialStream *chp, int argc, char *argv[]); // -
+static void cmd_cam_save(BaseSequentialStream *chp, int argc, char *argv[]); // - call it save. take in file name arg
 static void cmd_cam_status(BaseSequentialStream *chp, int argc, char *argv[]);
 static void cmd_cam_reg_write(BaseSequentialStream *chp, int argc, char *argv[]);
 static void cmd_cam_reg_read(BaseSequentialStream *chp, int argc, char *argv[]);
@@ -165,6 +165,10 @@ static void cmd_get_question(BaseSequentialStream *chp, int argc, char *argv[]);
 static void cmd_mark_question(BaseSequentialStream *chp, int argc, char *argv[]);
 
 static uint8_t AsciiToHex(char c);
+static void cam_init();
+static void cam_on();
+static void cam_capture();
+static void cam_save(char* filename);
 
 #define SHELL_WA_SIZE   THD_WA_SIZE(2048)
 #define BUFFER_SIZE     100000               // Max Image Size
@@ -172,8 +176,8 @@ static uint8_t AsciiToHex(char c);
 static const ShellCommand commands[] = { { "mem", cmd_mem }, { "threads",
 		cmd_threads }, { "cam_id", cmd_cam_id }, { "cam_init", cmd_cam_init }, {
 		"cam_on", cmd_cam_on }, { "cam_off", cmd_cam_off }, { "cam_reset",
-		cmd_cam_reset }, { "cam_capture", cmd_cam_capture }, { "cam_send",
-		cmd_cam_send }, { "cam_status", cmd_cam_status }, { "cam_reg_write",
+		cmd_cam_reset }, { "cam_capture", cmd_cam_capture }, { "cam_save",
+		cmd_cam_save }, { "cam_status", cmd_cam_status }, { "cam_reg_write",
 		cmd_cam_reg_write }, { "cam_reg_read", cmd_cam_reg_read },
 		{ "index_qs", cmd_index_questions }, { "get_total_qs", cmd_get_total_questions },
 		{ "get_question", cmd_get_question }, { "mark_question", cmd_mark_question },
@@ -349,73 +353,7 @@ static void cmd_cam_init(BaseSequentialStream *chp, int argc, char *argv[]) {
 	(void) argc;
 	(void) argv;
 
-	/* Send the required arrays to init and set the cam to JPEG output */
-	if (cam_write_array(ov2640_reset_regs) != 0) {
-		chprintf(chp, "reset regs write failed\r\n");
-		error |= 0x01;
-	}
-
-	chThdSleepMilliseconds(250);
-
-	if (cam_write_array(ov2640_jpeg_init_regs) != 0) {
-		chprintf(chp, "init regs write failed\r\n");
-		error |= 0x02;
-	}
-	if (cam_write_array(ov2640_yuv422_regs) != 0) {
-		chprintf(chp, "yuv422 regs write failed\r\n");
-		error |= 0x04;
-	}
-
-	if (cam_write_reg(0xFF, 0x01) != 0) {
-		chprintf(chp, "Error setting page\r\n");
-	}
-
-	if (cam_write_reg(0x15, 0x00) != 0) {
-		chprintf(chp, "Error setting page\r\n");
-	}
-
-	/* To change resolutions change the below register */
-	if (cam_write_array(ov2640_jpeg_regs) != 0) {
-		chprintf(chp, "jpeg regs write failed\r\n");
-		error |= 0x08;
-	}
-
-	chThdSleepMilliseconds(100);
-
-	/* To change resolutions change the below register */
-	/* For 320x240 use ov2640_320x240_regs             */
-	/* For 352x288 use ov2640_352x288_regs             */
-	/* For 640x480 use ov2640_640x480_regs             */
-	/* For 800x600 use ov2640_800x600_regs             */
-	/* For 1024x768 use ov2640_1024x768_regs           */
-	/*For 1024x768  use ov2640_1280x1024_reg 			*/
-	//if (cam_write_array(ov2640_1280x1024_regs) != 0) {
-	if (cam_write_array(ov2640_1024x768_regs) != 0) {
-		chprintf(chp, "Resolution regs write failed\r\n");
-		error |= 0x10;
-	}
-
-	if (cam_write_array(ov2640_jpeg_regs) != 0) {
-		chprintf(chp, "jpeg_regs write failed\r\n");
-		error |= 0x20;
-	}
-
-	/* ov2640_negative */
-	if (cam_write_array(ov2640_normal) != 0) {
-		chprintf(chp, "BW write failed\r\n");
-	}
-
-	if (cam_write_array(ov2640_autolight) != 0) {
-		chprintf(chp, "autolight failed");
-	}
-
-	if (error != 0x00) {
-		chprintf(chp, "CAM Init Failed.\r\n");
-		init = 0;
-	} else {
-		chprintf(chp, "CAM Init Completed.\r\n");
-		init = 1;
-	}
+	cam_init();
 }
 
 static void cmd_cam_off(BaseSequentialStream *chp, int argc, char *argv[]) {
@@ -448,13 +386,7 @@ static void cmd_cam_on(BaseSequentialStream *chp, int argc, char *argv[]) {
 	(void) argc;
 	(void) argv;
 	chprintf(chp, "Setting CAM ON\r\n");
-	/* Apply Clock */
-	pwmEnableChannel(&PWMD1, 0, 2);
-	init = 0;
-	captured = 0;
-	busy = 0;
-	power = 1;
-	/* Define power supply ENABLE pins and then assert them here! */
+	cam_on();
 }
 
 static void cmd_cam_reset(BaseSequentialStream *chp, int argc, char *argv[]) {
@@ -484,19 +416,11 @@ static void cmd_cam_capture(BaseSequentialStream *chp, int argc, char *argv[]) {
 	(void) argc;
 	(void) argv;
 
-	busy = 1;
-	dcmiStart(&DCMID1, &dcmicfg);
-	chThdSleepMilliseconds(250);
-	dcmiStartReceiveOneShot(&DCMID1, BUFFER_SIZE / 2, ImageBuffer0,
-			ImageBuffer1);
-	chThdSleepMilliseconds(250);
-	chprintf(chp, "Image Capture Complete\r\n",
-			dmaStreamGetTransactionSize(DCMID1.dmarx));
-	busy = 0;
-	captured = 1;
+	cam_capture();
+	chprintf(chp, "Image capture complete.\r\n");
 }
 
-static void cmd_cam_send(BaseSequentialStream *chp, int argc, char *argv[]) {
+static void cmd_cam_save(BaseSequentialStream *chp, int argc, char *argv[]) {
 	/* Sends the captured JPEG frame from the internal MCU memory via serial
 	 * interface.
 	 */
@@ -516,55 +440,27 @@ static void cmd_cam_send(BaseSequentialStream *chp, int argc, char *argv[]) {
 	 chprintf(chp, "%c", ImageBuffer[i]);
 	 }
 	 */
-	FIL fsrc; /* file object */
-	FRESULT err;
 
-	(void) argv;
-
-	err = f_open(&fsrc, "hello.jpg", FA_READ | FA_WRITE | FA_CREATE_ALWAYS);
-	if (err != FR_OK) {
-		chprintf(chp, "FS: f_open(\"hello.txt\") failed.\r\n");
-		//	verbose_error(chp, err);
+	if (argc != 1) {
+		chprintf(chp, "Wrong number of arguments!\r\n");
+		chprintf(chp, "Enter: cmd_cam_save FILENAME.jpg\r\n");
 		return;
-	} else {
-		chprintf(chp, "FS: f_open(\"hello.txt\") succeeded\r\n");
-	}
-	/*
-	 * Write text to the file.
-	 */
-
-	/*
-	 * In this loop, we should have an overflow condition - if we've reached
-	 * 100K, we're overflown, so we should return an error.
-	 */
-	uint16_t i;
-
-	for (i = 0; i < BUFFER_SIZE; i++) {
-		if ((ImageBuffer[i] == 0xFF) && (ImageBuffer[i + 1] == 0xD9)) {
-			/* Found END of JPEG Frame */
-			f_putc(ImageBuffer[i], &fsrc);
-			f_putc(ImageBuffer[i + 1], &fsrc);
-			break;
-		}
-		f_putc(ImageBuffer[i], &fsrc);
 	}
 
-	/*
-	 written = f_puts ("HELLO WORLD", &fsrc);
-	 if (written == -1) {
-	 chprintf(chp, "FS: f_puts(\"Hello World\",\"hello.txt\") failed\r\n");
-	 } else {
-	 chprintf(chp, "FS: f_puts(\"Hello World\",\"hello.txt\") succeeded\r\n");
-	 }
-	 */
-	/*
-	 * Close the file
-	 */
-	f_close(&fsrc);
-	palTogglePad(GPIOD, 13);
-	chThdSleepMilliseconds(250); palTogglePad(GPIOD, 13);
+	char incomingChar = 0x01;
+	char filename[13];
+	uint8_t i = 0;
 
-	captured = 0;
+	while (incomingChar != 0) {
+		incomingChar = argv[0][i];
+		filename[i] = incomingChar;
+		i++;
+	}
+
+	chprintf(chp, filename);
+	chprintf(chp, " being saved...\r\n");
+
+	cam_save(filename);
 }
 
 static void cmd_cam_status(BaseSequentialStream *chp, int argc, char *argv[]) {
@@ -708,6 +604,148 @@ static void cmd_mark_question(BaseSequentialStream *chp, int argc, char *argv[])
 	if (argv[0][1] == 0) val = AsciiToHex(argv[0][0]);
 	else val = (AsciiToHex(argv[0][0]) * 10) + AsciiToHex(argv[0][1]);
 	chprintf(chp, "Marking question %d\r\n", val);
+}
+
+static void cam_init() {
+	/* Send the required arrays to init and set the cam to JPEG output */
+	if (cam_write_array(ov2640_reset_regs) != 0) {
+		//chprintf(chp, "reset regs write failed\r\n");
+		error |= 0x01;
+	}
+
+	chThdSleepMilliseconds(250);
+
+	if (cam_write_array(ov2640_jpeg_init_regs) != 0) {
+		//chprintf(chp, "init regs write failed\r\n");
+		error |= 0x02;
+	}
+	if (cam_write_array(ov2640_yuv422_regs) != 0) {
+		//chprintf(chp, "yuv422 regs write failed\r\n");
+		error |= 0x04;
+	}
+
+	if (cam_write_reg(0xFF, 0x01) != 0) {
+		//chprintf(chp, "Error setting page\r\n");
+	}
+
+	if (cam_write_reg(0x15, 0x00) != 0) {
+		//chprintf(chp, "Error setting page\r\n");
+	}
+
+	/* To change resolutions change the below register */
+	if (cam_write_array(ov2640_jpeg_regs) != 0) {
+		//chprintf(chp, "jpeg regs write failed\r\n");
+		error |= 0x08;
+	}
+
+	chThdSleepMilliseconds(100);
+
+	/* To change resolutions change the below register */
+	/* For 320x240 use ov2640_320x240_regs             */
+	/* For 352x288 use ov2640_352x288_regs             */
+	/* For 640x480 use ov2640_640x480_regs             */
+	/* For 800x600 use ov2640_800x600_regs             */
+	/* For 1024x768 use ov2640_1024x768_regs           */
+	/*For 1024x768  use ov2640_1280x1024_reg 			*/
+	//if (cam_write_array(ov2640_1280x1024_regs) != 0) {
+	if (cam_write_array(ov2640_1024x768_regs) != 0) {
+		//chprintf(chp, "Resolution regs write failed\r\n");
+		error |= 0x10;
+	}
+
+	if (cam_write_array(ov2640_jpeg_regs) != 0) {
+		//chprintf(chp, "jpeg_regs write failed\r\n");
+		error |= 0x20;
+	}
+
+	/* ov2640_negative */
+	if (cam_write_array(ov2640_normal) != 0) {
+		//chprintf(chp, "BW write failed\r\n");
+	}
+
+	if (cam_write_array(ov2640_autolight) != 0) {
+		//chprintf(chp, "autolight failed");
+	}
+
+	if (error != 0x00) {
+		//chprintf(chp, "CAM Init Failed.\r\n");
+		init = 0;
+	} else {
+		//chprintf(chp, "CAM Init Completed.\r\n");
+		init = 1;
+	}
+}
+
+static void cam_on() {
+	/* Apply Clock */
+	pwmEnableChannel(&PWMD1, 0, 2);
+	init = 0;
+	captured = 0;
+	busy = 0;
+	power = 1;
+	/* Define power supply ENABLE pins and then assert them here! */
+}
+
+static void cam_capture() {
+	busy = 1;
+	dcmiStart(&DCMID1, &dcmicfg);
+	chThdSleepMilliseconds(250);
+	dcmiStartReceiveOneShot(&DCMID1, BUFFER_SIZE / 2, ImageBuffer0,
+			ImageBuffer1);
+	chThdSleepMilliseconds(250);
+	//chprintf(chp, "Image Capture Complete\r\n", dmaStreamGetTransactionSize(DCMID1.dmarx));
+	busy = 0;
+	captured = 1;
+}
+
+static void cam_save(char* filename) {
+	FIL fsrc; /* file object */
+	FRESULT err;
+
+	err = f_open(&fsrc, filename, FA_READ | FA_WRITE | FA_CREATE_ALWAYS);
+	if (err != FR_OK) {
+		//chprintf(chp, "FS: f_open(\"hello.txt\") failed.\r\n");
+		//	verbose_error(chp, err);
+		return;
+	} else {
+		//chprintf(chp, "FS: f_open(\"hello.txt\") succeeded\r\n");
+	}
+	/*
+	 * Write text to the file.
+	 */
+
+	/*
+	 * In this loop, we should have an overflow condition - if we've reached
+	 * 100K, we're overflown, so we should return an error.
+	 */
+	uint16_t i;
+
+	for (i = 0; i < BUFFER_SIZE; i++) {
+		if ((ImageBuffer[i] == 0xFF) && (ImageBuffer[i + 1] == 0xD9)) {
+			/* Found END of JPEG Frame */
+			f_putc(ImageBuffer[i], &fsrc);
+			f_putc(ImageBuffer[i + 1], &fsrc);
+			break;
+		}
+		f_putc(ImageBuffer[i], &fsrc);
+	}
+
+	/*
+	 written = f_puts ("HELLO WORLD", &fsrc);
+	 if (written == -1) {
+	 chprintf(chp, "FS: f_puts(\"Hello World\",\"hello.txt\") failed\r\n");
+	 } else {
+	 chprintf(chp, "FS: f_puts(\"Hello World\",\"hello.txt\") succeeded\r\n");
+	 }
+	 */
+	/*
+	 * Close the file
+	 */
+	f_close(&fsrc);
+	palTogglePad(GPIOD, 13);
+	chThdSleepMilliseconds(250); palTogglePad(GPIOD, 13);
+
+	captured = 0;
 }
 
 static uint8_t AsciiToHex(char c) {
