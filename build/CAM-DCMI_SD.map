@@ -679,7 +679,6 @@ Discarded input sections
                 0x0000000000000000       0x20 build/obj/ff.o
  .text.get_fat  0x0000000000000000       0x20 build/obj/ff.o
  .text.put_fat  0x0000000000000000       0x20 build/obj/ff.o
- .text.f_read   0x0000000000000000      0x200 build/obj/ff.o
  .text.f_lseek  0x0000000000000000      0x1e0 build/obj/ff.o
  .text.f_opendir
                 0x0000000000000000       0xb0 build/obj/ff.o
@@ -697,7 +696,6 @@ Discarded input sections
  .text.f_utime  0x0000000000000000       0xa0 build/obj/ff.o
  .text.f_rename
                 0x0000000000000000      0x1a0 build/obj/ff.o
- .text.f_gets   0x0000000000000000       0x50 build/obj/ff.o
  .text.f_puts   0x0000000000000000       0x40 build/obj/ff.o
  .text.f_printf
                 0x0000000000000000      0x3a0 build/obj/ff.o
@@ -772,8 +770,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/obj/main.o
  .data          0x0000000000000000        0x0 build/obj/main.o
  .bss           0x0000000000000000        0x0 build/obj/main.o
- .bss.questionPositions
-                0x0000000000000000       0x64 build/obj/main.o
  .bss.DmaMode   0x0000000000000000        0x4 build/obj/main.o
  .bss.DmaStreamType
                 0x0000000000000000        0x4 build/obj/main.o
@@ -909,7 +905,7 @@ destructors     0x00000000080001ac        0x0
  *(SORT(.fini_array.*))
                 0x00000000080001ac                PROVIDE (__fini_array_end, .)
 
-.text           0x00000000080001b0     0x7964
+.text           0x00000000080001b0     0x7cb4
  *(.text.startup.*)
  .text.startup.main
                 0x00000000080001b0      0x140 build/obj/main.o
@@ -1603,246 +1599,250 @@ destructors     0x00000000080001ac        0x0
                 0x0000000008004b80                f_mount
  .text.f_open   0x0000000008004bc0      0x1e0 build/obj/ff.o
                 0x0000000008004bc0                f_open
- .text.f_write  0x0000000008004da0      0x240 build/obj/ff.o
-                0x0000000008004da0                f_write
- .text.f_sync   0x0000000008004fe0       0xe0 build/obj/ff.o
-                0x0000000008004fe0                f_sync
- .text.f_close  0x00000000080050c0       0x10 build/obj/ff.o
-                0x00000000080050c0                f_close
- .text.f_putc   0x00000000080050d0       0x30 build/obj/ff.o
-                0x00000000080050d0                f_putc
+ .text.f_read   0x0000000008004da0      0x200 build/obj/ff.o
+                0x0000000008004da0                f_read
+ .text.f_write  0x0000000008004fa0      0x240 build/obj/ff.o
+                0x0000000008004fa0                f_write
+ .text.f_sync   0x00000000080051e0       0xe0 build/obj/ff.o
+                0x00000000080051e0                f_sync
+ .text.f_close  0x00000000080052c0       0x10 build/obj/ff.o
+                0x00000000080052c0                f_close
+ .text.f_gets   0x00000000080052d0       0x50 build/obj/ff.o
+                0x00000000080052d0                f_gets
+ .text.f_putc   0x0000000008005320       0x30 build/obj/ff.o
+                0x0000000008005320                f_putc
  .text.ff_convert
-                0x0000000008005100       0x50 build/obj/ccsbcs.o
-                0x0000000008005100                ff_convert
+                0x0000000008005350       0x50 build/obj/ccsbcs.o
+                0x0000000008005350                ff_convert
  .text.ff_wtoupper
-                0x0000000008005150       0x30 build/obj/ccsbcs.o
-                0x0000000008005150                ff_wtoupper
+                0x00000000080053a0       0x30 build/obj/ccsbcs.o
+                0x00000000080053a0                ff_wtoupper
  .text.chprintf
-                0x0000000008005180       0x20 build/obj/shell.o
+                0x00000000080053d0       0x20 build/obj/shell.o
  .text.cmd_systime
-                0x00000000080051a0       0x30 build/obj/shell.o
+                0x00000000080053f0       0x30 build/obj/shell.o
  .text.cmd_info
-                0x00000000080051d0       0xc0 build/obj/shell.o
+                0x0000000008005420       0xc0 build/obj/shell.o
  .text._strtok.constprop.2
-                0x0000000008005290       0x40 build/obj/shell.o
+                0x00000000080054e0       0x40 build/obj/shell.o
  .text.shellInit
-                0x00000000080052d0       0x10 build/obj/shell.o
-                0x00000000080052d0                shellInit
+                0x0000000008005520       0x10 build/obj/shell.o
+                0x0000000008005520                shellInit
  .text.shellExit
-                0x00000000080052e0       0x20 build/obj/shell.o
-                0x00000000080052e0                shellExit
+                0x0000000008005530       0x20 build/obj/shell.o
+                0x0000000008005530                shellExit
  .text.shellCreate
-                0x0000000008005300       0x20 build/obj/shell.o
-                0x0000000008005300                shellCreate
+                0x0000000008005550       0x20 build/obj/shell.o
+                0x0000000008005550                shellCreate
  .text.shellGetLine
-                0x0000000008005320       0xa0 build/obj/shell.o
-                0x0000000008005320                shellGetLine
+                0x0000000008005570       0xa0 build/obj/shell.o
+                0x0000000008005570                shellGetLine
  .text.shell_thread
-                0x00000000080053c0      0x1a0 build/obj/shell.o
+                0x0000000008005610      0x1a0 build/obj/shell.o
  .text.long_to_string_with_divisor.constprop.0
-                0x0000000008005560       0x50 build/obj/chprintf.o
+                0x00000000080057b0       0x50 build/obj/chprintf.o
  .text.chvprintf
-                0x00000000080055b0      0x240 build/obj/chprintf.o
-                0x00000000080055b0                chvprintf
+                0x0000000008005800      0x240 build/obj/chprintf.o
+                0x0000000008005800                chvprintf
  .text.SCCB_Write
-                0x00000000080057f0       0x50 build/obj/SCCB.o
-                0x00000000080057f0                SCCB_Write
+                0x0000000008005a40       0x50 build/obj/SCCB.o
+                0x0000000008005a40                SCCB_Write
  .text.SCCB_Read
-                0x0000000008005840       0x50 build/obj/SCCB.o
-                0x0000000008005840                SCCB_Read
- .text.hwInit   0x0000000008005890      0x1a0 build/obj/hwinit.o
-                0x0000000008005890                hwInit
+                0x0000000008005a90       0x50 build/obj/SCCB.o
+                0x0000000008005a90                SCCB_Read
+ .text.hwInit   0x0000000008005ae0      0x1a0 build/obj/hwinit.o
+                0x0000000008005ae0                hwInit
  .text.cam_write_reg
-                0x0000000008005a30       0x20 build/obj/OV2640.o
-                0x0000000008005a30                cam_write_reg
+                0x0000000008005c80       0x20 build/obj/OV2640.o
+                0x0000000008005c80                cam_write_reg
  .text.cam_read_reg
-                0x0000000008005a50       0x20 build/obj/OV2640.o
-                0x0000000008005a50                cam_read_reg
+                0x0000000008005ca0       0x20 build/obj/OV2640.o
+                0x0000000008005ca0                cam_read_reg
  .text.cam_write_array
-                0x0000000008005a70       0x30 build/obj/OV2640.o
-                0x0000000008005a70                cam_write_array
+                0x0000000008005cc0       0x30 build/obj/OV2640.o
+                0x0000000008005cc0                cam_write_array
  .text.dmaTxferEndCb
-                0x0000000008005aa0       0x10 build/obj/main.o
-                0x0000000008005aa0                dmaTxferEndCb
+                0x0000000008005cf0       0x10 build/obj/main.o
+                0x0000000008005cf0                dmaTxferEndCb
  .text.frameEndCb
-                0x0000000008005ab0       0x30 build/obj/main.o
-                0x0000000008005ab0                frameEndCb
+                0x0000000008005d00       0x30 build/obj/main.o
+                0x0000000008005d00                frameEndCb
  .text.chprintf
-                0x0000000008005ae0       0x20 build/obj/main.o
+                0x0000000008005d30       0x20 build/obj/main.o
  .text.cmd_get_total_questions
-                0x0000000008005b00       0x10 build/obj/main.o
- .text.cmd_index_questions
-                0x0000000008005b10       0x10 build/obj/main.o
+                0x0000000008005d50       0x10 build/obj/main.o
  .text.cmd_cam_status
-                0x0000000008005b20       0xd0 build/obj/main.o
+                0x0000000008005d60       0xd0 build/obj/main.o
+ .text.cmd_index_questions
+                0x0000000008005e30       0xb0 build/obj/main.o
  .text.cmd_cam_id
-                0x0000000008005bf0       0x90 build/obj/main.o
+                0x0000000008005ee0       0x90 build/obj/main.o
  .text.cam_save
-                0x0000000008005c80       0x80 build/obj/main.o
+                0x0000000008005f70       0x80 build/obj/main.o
  .text.cmd_cam_reset
-                0x0000000008005d00       0x50 build/obj/main.o
+                0x0000000008005ff0       0x50 build/obj/main.o
  .text.cmd_cam_off
-                0x0000000008005d50       0x60 build/obj/main.o
- .text.Thread1  0x0000000008005db0       0x40 build/obj/main.o
+                0x0000000008006040       0x60 build/obj/main.o
+ .text.Thread1  0x00000000080060a0       0x40 build/obj/main.o
  .text.cmd_cam_capture
-                0x0000000008005df0       0x70 build/obj/main.o
+                0x00000000080060e0       0x70 build/obj/main.o
  .text.cmd_cam_on
-                0x0000000008005e60       0x40 build/obj/main.o
+                0x0000000008006150       0x40 build/obj/main.o
  .text.cmd_cam_init
-                0x0000000008005ea0       0xd0 build/obj/main.o
- .text.tmrfunc  0x0000000008005f70       0x70 build/obj/main.o
+                0x0000000008006190       0xd0 build/obj/main.o
+ .text.tmrfunc  0x0000000008006260       0x70 build/obj/main.o
  .text.RemoveHandler
-                0x0000000008005fe0       0x20 build/obj/main.o
+                0x00000000080062d0       0x20 build/obj/main.o
  .text.AsciiToHex
-                0x0000000008006000       0x90 build/obj/main.o
+                0x00000000080062f0       0x90 build/obj/main.o
  .text.cmd_mark_question
-                0x0000000008006090       0x70 build/obj/main.o
+                0x0000000008006380       0x70 build/obj/main.o
  .text.cmd_get_question
-                0x0000000008006100       0x70 build/obj/main.o
+                0x00000000080063f0       0x70 build/obj/main.o
  .text.cmd_cam_reg_read
-                0x0000000008006170       0x80 build/obj/main.o
+                0x0000000008006460       0x80 build/obj/main.o
  .text.cmd_cam_reg_write
-                0x00000000080061f0       0x90 build/obj/main.o
+                0x00000000080064e0       0x90 build/obj/main.o
  .text.cmd_cam_save
-                0x0000000008006280       0x60 build/obj/main.o
+                0x0000000008006570       0x60 build/obj/main.o
  .text.cmd_threads
-                0x00000000080062e0       0x70 build/obj/main.o
- .text.cmd_mem  0x0000000008006350       0x60 build/obj/main.o
+                0x00000000080065d0       0x70 build/obj/main.o
+ .text.cmd_mem  0x0000000008006640       0x60 build/obj/main.o
  .text.InsertHandler
-                0x00000000080063b0       0x40 build/obj/main.o
+                0x00000000080066a0       0x40 build/obj/main.o
  .text.strcasecmp
-                0x00000000080063f0       0x44 /Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7e-m/libg.a(lib_a-strcasecmp.o)
-                0x00000000080063f0                strcasecmp
- *fill*         0x0000000008006434        0xc 
- .text.strpbrk  0x0000000008006440       0x50 /Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7e-m/libg.a(lib_a-strpbrk.o)
-                0x0000000008006440                strpbrk
- .text.strspn   0x0000000008006490       0x40 /Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7e-m/libg.a(lib_a-strspn.o)
-                0x0000000008006490                strspn
+                0x00000000080066e0       0x44 /Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7e-m/libg.a(lib_a-strcasecmp.o)
+                0x00000000080066e0                strcasecmp
+ *fill*         0x0000000008006724        0xc 
+ .text.strpbrk  0x0000000008006730       0x50 /Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7e-m/libg.a(lib_a-strpbrk.o)
+                0x0000000008006730                strpbrk
+ .text.strspn   0x0000000008006780       0x40 /Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7e-m/libg.a(lib_a-strspn.o)
+                0x0000000008006780                strspn
  *(.rodata)
  *(.rodata.*)
  .rodata.str1.4
-                0x00000000080064d0        0x5 build/obj/chsys.o
+                0x00000000080067c0        0x5 build/obj/chsys.o
                                           0x8 (size before relaxing)
- *fill*         0x00000000080064d5        0xb 
+ *fill*         0x00000000080067c5        0xb 
  .rodata.ch_debug
-                0x00000000080064e0       0x18 build/obj/chregistry.o
-                0x00000000080064e0                ch_debug
- *fill*         0x00000000080064f8        0x8 
+                0x00000000080067d0       0x18 build/obj/chregistry.o
+                0x00000000080067d0                ch_debug
+ *fill*         0x00000000080067e8        0x8 
  .rodata.stopcmd.7416
-                0x0000000008006500        0x8 build/obj/mmc_spi.o
- *fill*         0x0000000008006508        0x8 
+                0x00000000080067f0        0x8 build/obj/mmc_spi.o
+ *fill*         0x00000000080067f8        0x8 
  .rodata.stop.7430
-                0x0000000008006510        0x4 build/obj/mmc_spi.o
- *fill*         0x0000000008006514        0xc 
+                0x0000000008006800        0x4 build/obj/mmc_spi.o
+ *fill*         0x0000000008006804        0xc 
  .rodata.crc7_lookup_table
-                0x0000000008006520      0x100 build/obj/mmc_spi.o
+                0x0000000008006810      0x100 build/obj/mmc_spi.o
  .rodata.mmc_vmt
-                0x0000000008006620       0x20 build/obj/mmc_spi.o
+                0x0000000008006910       0x20 build/obj/mmc_spi.o
  .rodata.start.7425
-                0x0000000008006640        0x4 build/obj/mmc_spi.o
- *fill*         0x0000000008006644        0xc 
- .rodata.vmt    0x0000000008006650       0x20 build/obj/serial.o
+                0x0000000008006930        0x4 build/obj/mmc_spi.o
+ *fill*         0x0000000008006934        0xc 
+ .rodata.vmt    0x0000000008006940       0x20 build/obj/serial.o
  .rodata._stm32_dma_streams
-                0x0000000008006670       0xc0 build/obj/stm32_dma.o
-                0x0000000008006670                _stm32_dma_streams
+                0x0000000008006960       0xc0 build/obj/stm32_dma.o
+                0x0000000008006960                _stm32_dma_streams
  .rodata.default_config
-                0x0000000008006730        0xc build/obj/serial_lld.o
- *fill*         0x000000000800673c        0x4 
+                0x0000000008006a20        0xc build/obj/serial_lld.o
+ *fill*         0x0000000008006a2c        0x4 
  .rodata.pal_default_config
-                0x0000000008006740       0xfc build/obj/board.o
-                0x0000000008006740                pal_default_config
- *fill*         0x000000000800683c        0x4 
+                0x0000000008006a30       0xfc build/obj/board.o
+                0x0000000008006a30                pal_default_config
+ *fill*         0x0000000008006b2c        0x4 
  .rodata.str1.4
-                0x0000000008006840       0x13 build/obj/ff.o
+                0x0000000008006b30       0x13 build/obj/ff.o
                                          0x14 (size before relaxing)
- *fill*         0x0000000008006853        0xd 
+ *fill*         0x0000000008006b43        0xd 
  .rodata.LfnOfs
-                0x0000000008006860       0x10 build/obj/ff.o
+                0x0000000008006b50       0x10 build/obj/ff.o
  .rodata.excvt.5254
-                0x0000000008006870       0x80 build/obj/ff.o
- .rodata.Tbl    0x00000000080068f0      0x100 build/obj/ccsbcs.o
+                0x0000000008006b60       0x80 build/obj/ff.o
+ .rodata.Tbl    0x0000000008006be0      0x100 build/obj/ccsbcs.o
  .rodata.tbl_lower.4997
-                0x00000000080069f0      0x1e0 build/obj/ccsbcs.o
+                0x0000000008006ce0      0x1e0 build/obj/ccsbcs.o
  .rodata.tbl_upper.4998
-                0x0000000008006bd0      0x1e0 build/obj/ccsbcs.o
+                0x0000000008006ec0      0x1e0 build/obj/ccsbcs.o
  .rodata.str1.4
-                0x0000000008006db0      0x249 build/obj/shell.o
+                0x00000000080070a0      0x249 build/obj/shell.o
                                         0x250 (size before relaxing)
- *fill*         0x0000000008006ff9        0x7 
+ *fill*         0x00000000080072e9        0x7 
  .rodata.str1.4
-                0x0000000008007000        0x7 build/obj/chprintf.o
+                0x00000000080072f0        0x7 build/obj/chprintf.o
                                           0x8 (size before relaxing)
- *fill*         0x0000000008007007        0x9 
+ *fill*         0x00000000080072f7        0x9 
  .rodata.pwmcfg
-                0x0000000008007010       0x34 build/obj/hwinit.o
- *fill*         0x0000000008007044        0xc 
+                0x0000000008007300       0x34 build/obj/hwinit.o
+ *fill*         0x0000000008007334        0xc 
  .rodata.i2cfg1
-                0x0000000008007050        0xc build/obj/hwinit.o
- *fill*         0x000000000800705c        0x4 
- .rodata.ov2640_1024x768_regs
-                0x0000000008007060       0x50 build/obj/main.o
+                0x0000000008007340        0xc build/obj/hwinit.o
+ *fill*         0x000000000800734c        0x4 
  .rodata.ov2640_reset_regs
-                0x00000000080070b0        0x8 build/obj/main.o
- *fill*         0x00000000080070b8        0x8 
- .rodata.states.7372
-                0x00000000080070c0       0x3c build/obj/main.o
- *fill*         0x00000000080070fc        0x4 
+                0x0000000008007350        0x8 build/obj/main.o
+ *fill*         0x0000000008007358        0x8 
+ .rodata.evhndl.7357
+                0x0000000008007360        0x8 build/obj/main.o
+ *fill*         0x0000000008007368        0x8 
  .rodata.ov2640_jpeg_init_regs
-                0x0000000008007100      0x180 build/obj/main.o
+                0x0000000008007370      0x180 build/obj/main.o
  .rodata.dcmicfg
-                0x0000000008007280        0xc build/obj/main.o
- *fill*         0x000000000800728c        0x4 
+                0x00000000080074f0        0xc build/obj/main.o
+ *fill*         0x00000000080074fc        0x4 
  .rodata.ov2640_jpeg_regs
-                0x0000000008007290       0x14 build/obj/main.o
- *fill*         0x00000000080072a4        0xc 
- .rodata.ov2640_autolight
-                0x00000000080072b0        0x8 build/obj/main.o
- *fill*         0x00000000080072b8        0x8 
- .rodata.ov2640_yuv422_regs
-                0x00000000080072c0       0x14 build/obj/main.o
- *fill*         0x00000000080072d4        0xc 
- .rodata.evhndl.7355
-                0x00000000080072e0        0x8 build/obj/main.o
- *fill*         0x00000000080072e8        0x8 
- .rodata.commands
-                0x00000000080072f0       0x88 build/obj/main.o
- *fill*         0x0000000008007378        0x8 
- .rodata.shell_cfg1
-                0x0000000008007380        0x8 build/obj/main.o
- *fill*         0x0000000008007388        0x8 
- .rodata.ov2640_normal
-                0x0000000008007390       0x10 build/obj/main.o
+                0x0000000008007500       0x14 build/obj/main.o
+ *fill*         0x0000000008007514        0xc 
+ .rodata.states.7374
+                0x0000000008007520       0x3c build/obj/main.o
+ *fill*         0x000000000800755c        0x4 
  .rodata.str1.4
-                0x00000000080073a0      0x66c build/obj/main.o
- *fill*         0x0000000008007a0c        0x4 
+                0x0000000008007560      0x6c8 build/obj/main.o
+ *fill*         0x0000000008007c28        0x8 
+ .rodata.ov2640_autolight
+                0x0000000008007c30        0x8 build/obj/main.o
+ *fill*         0x0000000008007c38        0x8 
+ .rodata.ov2640_yuv422_regs
+                0x0000000008007c40       0x14 build/obj/main.o
+ *fill*         0x0000000008007c54        0xc 
+ .rodata.ov2640_1024x768_regs
+                0x0000000008007c60       0x50 build/obj/main.o
+ .rodata.commands
+                0x0000000008007cb0       0x88 build/obj/main.o
+ *fill*         0x0000000008007d38        0x8 
+ .rodata.shell_cfg1
+                0x0000000008007d40        0x8 build/obj/main.o
+ *fill*         0x0000000008007d48        0x8 
+ .rodata.ov2640_normal
+                0x0000000008007d50       0x10 build/obj/main.o
  .rodata._ctype_
-                0x0000000008007a10      0x104 /Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7e-m/libg.a(lib_a-ctype_.o)
-                0x0000000008007a10                _ctype_
+                0x0000000008007d60      0x104 /Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7e-m/libg.a(lib_a-ctype_.o)
+                0x0000000008007d60                _ctype_
  *(.glue_7t)
  .glue_7t       0x0000000000000000        0x0 linker stubs
  *(.glue_7)
  .glue_7        0x0000000000000000        0x0 linker stubs
  *(.gcc*)
 
-.vfp11_veneer   0x0000000008007b14        0x0
+.vfp11_veneer   0x0000000008007e64        0x0
  .vfp11_veneer  0x0000000000000000        0x0 linker stubs
 
-.v4_bx          0x0000000008007b14        0x0
+.v4_bx          0x0000000008007e64        0x0
  .v4_bx         0x0000000000000000        0x0 linker stubs
 
-.iplt           0x0000000008007b14        0x0
+.iplt           0x0000000008007e64        0x0
  .iplt          0x0000000000000000        0x0 build/obj/crt0.o
 
-.rel.dyn        0x0000000008007b14        0x0
+.rel.dyn        0x0000000008007e64        0x0
  .rel.iplt      0x0000000000000000        0x0 build/obj/crt0.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM.exidx      0x0000000008007b14        0x0
-                0x0000000008007b14                PROVIDE (__exidx_start, .)
+.ARM.exidx      0x0000000008007e64        0x0
+                0x0000000008007e64                PROVIDE (__exidx_start, .)
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x0000000008007b14                PROVIDE (__exidx_end, .)
+                0x0000000008007e64                PROVIDE (__exidx_end, .)
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
@@ -1850,12 +1850,12 @@ destructors     0x00000000080001ac        0x0
 .eh_frame
  *(.eh_frame)
 
-.textalign      0x0000000008007b14        0x4
-                0x0000000008007b18                . = ALIGN (0x8)
- *fill*         0x0000000008007b14        0x4 
-                0x0000000008007b18                . = ALIGN (0x4)
-                0x0000000008007b18                _etext = .
-                0x0000000008007b18                _textdata = _etext
+.textalign      0x0000000008007e64        0x4
+                0x0000000008007e68                . = ALIGN (0x8)
+ *fill*         0x0000000008007e64        0x4 
+                0x0000000008007e68                . = ALIGN (0x4)
+                0x0000000008007e68                _etext = .
+                0x0000000008007e68                _textdata = _etext
 
 .stacks         0x0000000020000000      0x800
                 0x0000000020000000                . = ALIGN (0x8)
@@ -1872,7 +1872,7 @@ destructors     0x00000000080001ac        0x0
                 0x0000000020000800                __process_stack_end__ = .
                 0x0000000020000800                __main_thread_stack_end__ = .
 
-.data           0x0000000020000800       0x54 load address 0x0000000008007b18
+.data           0x0000000020000800       0x54 load address 0x0000000008007e68
                 0x0000000020000800                . = ALIGN (0x4)
                 0x0000000020000800                PROVIDE (_data, .)
  *(.data)
@@ -1900,10 +1900,10 @@ destructors     0x00000000080001ac        0x0
                 0x0000000020000854                . = ALIGN (0x4)
                 0x0000000020000854                PROVIDE (_edata, .)
 
-.igot.plt       0x0000000020000854        0x0 load address 0x0000000008007b6c
+.igot.plt       0x0000000020000854        0x0 load address 0x0000000008007ebc
  .igot.plt      0x0000000000000000        0x0 build/obj/crt0.o
 
-.bss            0x0000000020000854    0x18e04
+.bss            0x0000000020000854    0x18e70
                 0x0000000020000854                . = ALIGN (0x4)
                 0x0000000020000854                PROVIDE (_bss_start, .)
  *(.bss)
@@ -1952,45 +1952,53 @@ destructors     0x00000000080001ac        0x0
  .bss.shell_terminated
                 0x0000000020000bc8        0x4 build/obj/shell.o
                 0x0000000020000bc8                shell_terminated
- .bss.MMC_FS    0x0000000020000bcc      0x234 build/obj/main.o
-                0x0000000020000bcc                MMC_FS
+ .bss.questionPositions
+                0x0000000020000bcc       0x64 build/obj/main.o
+                0x0000000020000bcc                questionPositions
+ .bss.MMC_FS    0x0000000020000c30      0x234 build/obj/main.o
+                0x0000000020000c30                MMC_FS
+ .bss.busy      0x0000000020000e64        0x1 build/obj/main.o
+                0x0000000020000e64                busy
+ *fill*         0x0000000020000e65        0x3 
  .bss.FrameCount
-                0x0000000020000e00        0x4 build/obj/main.o
-                0x0000000020000e00                FrameCount
- .bss.init      0x0000000020000e04        0x1 build/obj/main.o
-                0x0000000020000e04                init
- *fill*         0x0000000020000e05        0x3 
- .bss.removed_event
-                0x0000000020000e08        0x4 build/obj/main.o
- .bss.ImageBuffer
-                0x0000000020000e0c    0x186a0 build/obj/main.o
-                0x0000000020000e0c                ImageBuffer
- .bss.error     0x00000000200194ac        0x1 build/obj/main.o
-                0x00000000200194ac                error
- *fill*         0x00000000200194ad        0x3 
- .bss.MMCD1     0x00000000200194b0       0x34 build/obj/main.o
-                0x00000000200194b0                MMCD1
+                0x0000000020000e68        0x4 build/obj/main.o
+                0x0000000020000e68                FrameCount
+ .bss.init      0x0000000020000e6c        0x1 build/obj/main.o
+                0x0000000020000e6c                init
+ *fill*         0x0000000020000e6d        0x3 
  .bss.inserted_event
-                0x00000000200194e4        0x4 build/obj/main.o
- .bss.power     0x00000000200194e8        0x1 build/obj/main.o
-                0x00000000200194e8                power
- .bss.busy      0x00000000200194e9        0x1 build/obj/main.o
-                0x00000000200194e9                busy
- .bss.fs_ready  0x00000000200194ea        0x1 build/obj/main.o
- *fill*         0x00000000200194eb        0x1 
- .bss.tmr       0x00000000200194ec       0x14 build/obj/main.o
- .bss.captured  0x0000000020019500        0x1 build/obj/main.o
-                0x0000000020019500                captured
- *fill*         0x0000000020019501        0x3 
- .bss.cnt       0x0000000020019504        0x4 build/obj/main.o
+                0x0000000020000e70        0x4 build/obj/main.o
+ .bss.removed_event
+                0x0000000020000e74        0x4 build/obj/main.o
+ .bss.ImageBuffer
+                0x0000000020000e78    0x186a0 build/obj/main.o
+                0x0000000020000e78                ImageBuffer
+ .bss.error     0x0000000020019518        0x1 build/obj/main.o
+                0x0000000020019518                error
+ *fill*         0x0000000020019519        0x3 
+ .bss.MMCD1     0x000000002001951c       0x34 build/obj/main.o
+                0x000000002001951c                MMCD1
+ .bss.power     0x0000000020019550        0x1 build/obj/main.o
+                0x0000000020019550                power
+ .bss.fs_ready  0x0000000020019551        0x1 build/obj/main.o
+ *fill*         0x0000000020019552        0x2 
+ .bss.tmr       0x0000000020019554       0x14 build/obj/main.o
+ .bss.captured  0x0000000020019568        0x1 build/obj/main.o
+                0x0000000020019568                captured
+ *fill*         0x0000000020019569        0x3 
+ .bss.cnt       0x000000002001956c        0x4 build/obj/main.o
  .bss.waThread1
-                0x0000000020019508      0x150 build/obj/main.o
+                0x0000000020019570      0x150 build/obj/main.o
+ .bss.numOfQuestions
+                0x00000000200196c0        0x1 build/obj/main.o
+                0x00000000200196c0                numOfQuestions
  *(COMMON)
-                0x0000000020019658                . = ALIGN (0x4)
-                0x0000000020019658                PROVIDE (_bss_end, .)
-                0x0000000020019658                PROVIDE (end, .)
-                0x0000000020019658                _end = .
-                0x0000000020019658                __heap_base__ = _end
+                0x00000000200196c4                . = ALIGN (0x4)
+ *fill*         0x00000000200196c1        0x3 
+                0x00000000200196c4                PROVIDE (_bss_end, .)
+                0x00000000200196c4                PROVIDE (end, .)
+                0x00000000200196c4                _end = .
+                0x00000000200196c4                __heap_base__ = _end
                 0x000000002001c000                __heap_end__ = __ram_end__
 START GROUP
 LOAD /Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7e-m/libgcc.a
@@ -1999,7 +2007,7 @@ LOAD /Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/bin/../li
 END GROUP
 OUTPUT(build/CAM-DCMI_SD.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000    0x21d5d
+.debug_info     0x0000000000000000    0x21eeb
  .debug_info    0x0000000000000000      0x2b7 build/obj/crt0.o
  .debug_info    0x00000000000002b7      0x1cd build/obj/vectors.o
  .debug_info    0x0000000000000484       0x92 build/obj/chcore.o
@@ -2044,9 +2052,9 @@ OUTPUT(build/CAM-DCMI_SD.elf elf32-littlearm)
  .debug_info    0x000000000001c1f8      0x97b build/obj/SCCB.o
  .debug_info    0x000000000001cb73     0x1524 build/obj/hwinit.o
  .debug_info    0x000000000001e097      0x3dd build/obj/OV2640.o
- .debug_info    0x000000000001e474     0x38e9 build/obj/main.o
+ .debug_info    0x000000000001e474     0x3a77 build/obj/main.o
 
-.debug_abbrev   0x0000000000000000     0x64db
+.debug_abbrev   0x0000000000000000     0x64ea
  .debug_abbrev  0x0000000000000000       0xfd build/obj/crt0.o
  .debug_abbrev  0x00000000000000fd       0xaf build/obj/vectors.o
  .debug_abbrev  0x00000000000001ac       0x42 build/obj/chcore.o
@@ -2091,9 +2099,9 @@ OUTPUT(build/CAM-DCMI_SD.elf elf32-littlearm)
  .debug_abbrev  0x0000000000005a86      0x1fd build/obj/SCCB.o
  .debug_abbrev  0x0000000000005c83      0x200 build/obj/hwinit.o
  .debug_abbrev  0x0000000000005e83      0x129 build/obj/OV2640.o
- .debug_abbrev  0x0000000000005fac      0x52f build/obj/main.o
+ .debug_abbrev  0x0000000000005fac      0x53e build/obj/main.o
 
-.debug_loc      0x0000000000000000     0xe667
+.debug_loc      0x0000000000000000     0xe6a2
  .debug_loc     0x0000000000000000       0xde build/obj/crt0.o
  .debug_loc     0x00000000000000de       0x5a build/obj/chcore_v7m.o
  .debug_loc     0x0000000000000138      0x159 build/obj/nvic.o
@@ -2134,7 +2142,7 @@ OUTPUT(build/CAM-DCMI_SD.elf elf32-littlearm)
  .debug_loc     0x000000000000ca4c      0x76f build/obj/chprintf.o
  .debug_loc     0x000000000000d1bb      0x123 build/obj/SCCB.o
  .debug_loc     0x000000000000d2de       0xc9 build/obj/OV2640.o
- .debug_loc     0x000000000000d3a7     0x12c0 build/obj/main.o
+ .debug_loc     0x000000000000d3a7     0x12fb build/obj/main.o
 
 .debug_aranges  0x0000000000000000      0xf98
  .debug_aranges
@@ -2228,7 +2236,7 @@ OUTPUT(build/CAM-DCMI_SD.elf elf32-littlearm)
  .debug_aranges
                 0x0000000000000eb0       0xe8 build/obj/main.o
 
-.debug_ranges   0x0000000000000000     0x1d60
+.debug_ranges   0x0000000000000000     0x1d80
  .debug_ranges  0x0000000000000000       0x58 build/obj/crt0.o
  .debug_ranges  0x0000000000000058       0x10 build/obj/vectors.o
  .debug_ranges  0x0000000000000068       0x10 build/obj/chcore.o
@@ -2273,9 +2281,9 @@ OUTPUT(build/CAM-DCMI_SD.elf elf32-littlearm)
  .debug_ranges  0x0000000000001b68       0x18 build/obj/SCCB.o
  .debug_ranges  0x0000000000001b80       0x10 build/obj/hwinit.o
  .debug_ranges  0x0000000000001b90       0x20 build/obj/OV2640.o
- .debug_ranges  0x0000000000001bb0      0x1b0 build/obj/main.o
+ .debug_ranges  0x0000000000001bb0      0x1d0 build/obj/main.o
 
-.debug_line     0x0000000000000000     0xad98
+.debug_line     0x0000000000000000     0xadbe
  .debug_line    0x0000000000000000      0x1a2 build/obj/crt0.o
  .debug_line    0x00000000000001a2      0x147 build/obj/vectors.o
  .debug_line    0x00000000000002e9       0x64 build/obj/chcore.o
@@ -2320,9 +2328,9 @@ OUTPUT(build/CAM-DCMI_SD.elf elf32-littlearm)
  .debug_line    0x0000000000009aa3      0x346 build/obj/SCCB.o
  .debug_line    0x0000000000009de9      0x488 build/obj/hwinit.o
  .debug_line    0x000000000000a271      0x1d8 build/obj/OV2640.o
- .debug_line    0x000000000000a449      0x94f build/obj/main.o
+ .debug_line    0x000000000000a449      0x975 build/obj/main.o
 
-.debug_str      0x0000000000000000     0x3c26
+.debug_str      0x0000000000000000     0x3c56
  .debug_str     0x0000000000000000      0x2b5 build/obj/crt0.o
                                         0x2ff (size before relaxing)
  .debug_str     0x00000000000002b5      0x156 build/obj/vectors.o
@@ -2411,8 +2419,8 @@ OUTPUT(build/CAM-DCMI_SD.elf elf32-littlearm)
                                         0x991 (size before relaxing)
  .debug_str     0x000000000000380f      0x1ad build/obj/OV2640.o
                                         0x3a9 (size before relaxing)
- .debug_str     0x00000000000039bc      0x26a build/obj/main.o
-                                       0x1397 (size before relaxing)
+ .debug_str     0x00000000000039bc      0x29a build/obj/main.o
+                                       0x13d4 (size before relaxing)
 
 .comment        0x0000000000000000       0x70
  .comment       0x0000000000000000       0x70 build/obj/crt0.o
@@ -2563,7 +2571,7 @@ OUTPUT(build/CAM-DCMI_SD.elf elf32-littlearm)
  .ARM.attributes
                 0x0000000000000981       0x2e /Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7e-m/libg.a(lib_a-ctype_.o)
 
-.debug_frame    0x0000000000000000     0x2b84
+.debug_frame    0x0000000000000000     0x2b98
  .debug_frame   0x0000000000000000       0x50 build/obj/crt0.o
  .debug_frame   0x0000000000000050       0x20 build/obj/vectors.o
  .debug_frame   0x0000000000000070       0x20 build/obj/chcore.o
@@ -2608,10 +2616,10 @@ OUTPUT(build/CAM-DCMI_SD.elf elf32-littlearm)
  .debug_frame   0x00000000000026e0       0x5c build/obj/SCCB.o
  .debug_frame   0x000000000000273c       0x3c build/obj/hwinit.o
  .debug_frame   0x0000000000002778       0x64 build/obj/OV2640.o
- .debug_frame   0x00000000000027dc      0x328 build/obj/main.o
- .debug_frame   0x0000000000002b04       0x28 /Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7e-m/libg.a(lib_a-strcasecmp.o)
- .debug_frame   0x0000000000002b2c       0x2c /Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7e-m/libg.a(lib_a-strpbrk.o)
- .debug_frame   0x0000000000002b58       0x2c /Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7e-m/libg.a(lib_a-strspn.o)
+ .debug_frame   0x00000000000027dc      0x33c build/obj/main.o
+ .debug_frame   0x0000000000002b18       0x28 /Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7e-m/libg.a(lib_a-strcasecmp.o)
+ .debug_frame   0x0000000000002b40       0x2c /Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7e-m/libg.a(lib_a-strpbrk.o)
+ .debug_frame   0x0000000000002b6c       0x2c /Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7e-m/libg.a(lib_a-strspn.o)
 
 Cross Reference Table
 
@@ -3130,6 +3138,7 @@ f_close                                           build/obj/ff.o
                                                   build/obj/main.o
 f_getfree                                         build/obj/ff.o
 f_gets                                            build/obj/ff.o
+                                                  build/obj/main.o
 f_lseek                                           build/obj/ff.o
 f_mkdir                                           build/obj/ff.o
 f_mount                                           build/obj/ff.o
@@ -3243,6 +3252,7 @@ mmc_lld_is_write_protected                        build/obj/board.o
 mmcsdGetCapacity                                  build/obj/mmcsd.o
                                                   build/obj/mmc_spi.o
 msObjectInit                                      build/obj/chprintf.o
+numOfQuestions                                    build/obj/main.o
 nvicDisableVector                                 build/obj/nvic.o
                                                   build/obj/serial_lld.o
                                                   build/obj/pwm_lld.o

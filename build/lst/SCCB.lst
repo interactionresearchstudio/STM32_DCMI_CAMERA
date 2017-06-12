@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
   55 0014 8DF81350 		strb	r5, [sp, #19]
   56              		.loc 1 9 0
   57 0018 FFF7FEFF 		bl	i2cAcquireBus
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 2
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 2
 
 
   58              	.LVL2:
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  111              		.cfi_offset 14, -4
  112 0002 87B0     		sub	sp, sp, #28
  113              		.cfi_def_cfa_offset 48
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 3
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 3
 
 
  114              		.loc 1 19 0
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  167      AFF30080 
  167      AFF30080 
  168              	.Letext0:
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 4
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 4
 
 
  169              		.file 2 "/Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/lib/gcc/arm-none-eabi/4
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  223 0058 02       		.byte	0x2
  224 0059 05       		.byte	0x5
  225 005a 2E020000 		.4byte	.LASF5
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 5
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 5
 
 
  226 005e 03       		.uleb128 0x3
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  280 00ca 82000000 		.4byte	0x82
  281 00ce 04       		.uleb128 0x4
  282 00cf 01       		.byte	0x1
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 6
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 6
 
 
  283 00d0 02       		.byte	0x2
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  337 0145 57040000 		.4byte	.LASF28
  338 0149 07       		.byte	0x7
  339 014a 5F       		.byte	0x5f
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 7
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 7
 
 
  340 014b 56020000 		.4byte	0x256
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  394 01b7 EB000000 		.4byte	0xeb
  395 01bb 1E       		.byte	0x1e
  396 01bc 06       		.uleb128 0x6
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 8
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 8
 
 
  397 01bd 46040000 		.4byte	.LASF38
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  451 0229 F3000000 		.4byte	.LASF46
  452 022d 07       		.byte	0x7
  453 022e DA       		.byte	0xda
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 9
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 9
 
 
  454 022f 92020000 		.4byte	0x292
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  508 0295 8E050000 		.4byte	.LASF50
  509 0299 24       		.byte	0x24
  510 029a 08       		.byte	0x8
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 10
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 10
 
 
  511 029b 0C01     		.2byte	0x10c
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  565 030a 87020000 		.4byte	0x287
  566 030e 20       		.byte	0x20
  567 030f 00       		.byte	0
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 11
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 11
 
 
  568 0310 0B       		.uleb128 0xb
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  622 037e 09       		.byte	0x9
  623 037f 33       		.byte	0x33
  624 0380 42030000 		.4byte	0x342
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 12
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 12
 
 
  625 0384 0E       		.uleb128 0xe
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  679 03f1 43040000 		.4byte	0x443
  680 03f5 0C       		.uleb128 0xc
  681 03f6 435200   		.ascii	"CR\000"
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 13
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 13
 
 
  682 03f9 0A       		.byte	0xa
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  736 046b F903     		.2byte	0x3f9
  737 046d AD000000 		.4byte	0xad
  738 0471 02       		.byte	0x2
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 14
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 14
 
 
  739 0472 0C       		.uleb128 0xc
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  793 04e6 12       		.uleb128 0x12
  794 04e7 D2040000 		.4byte	.LASF73
  795 04eb 0A       		.byte	0xa
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 15
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 15
 
 
  796 04ec 0304     		.2byte	0x403
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  850 0561 0A       		.byte	0xa
  851 0562 0C04     		.2byte	0x40c
  852 0564 4F040000 		.4byte	0x44f
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 16
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 16
 
 
  853 0568 08       		.uleb128 0x8
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  907 05d1 0C       		.byte	0xc
  908 05d2 5A       		.byte	0x5a
  909 05d3 FC050000 		.4byte	0x5fc
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 17
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 17
 
 
  910 05d7 15       		.uleb128 0x15
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  964 0647 16       		.uleb128 0x16
  965 0648 01       		.byte	0x1
  966 0649 0D       		.byte	0xd
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 18
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 18
 
 
  967 064a 4801     		.2byte	0x148
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  1021 06be 0D       		.byte	0xd
  1022 06bf 6201     		.2byte	0x162
  1023 06c1 55070000 		.4byte	0x755
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 19
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 19
 
 
  1024 06c5 12       		.uleb128 0x12
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  1078 073a 12       		.uleb128 0x12
  1079 073b 65010000 		.4byte	.LASF118
  1080 073f 0D       		.byte	0xd
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 20
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 20
 
 
  1081 0740 9401     		.2byte	0x194
@@ -1198,7 +1198,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  1135 07c0 01       		.byte	0x1
  1136 07c1 06       		.byte	0x6
  1137 07c2 35080000 		.4byte	0x835
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 21
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 21
 
 
  1138 07c6 02       		.uleb128 0x2
@@ -1258,7 +1258,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  1192 0814 35       		.byte	0x35
  1193 0815 1D       		.uleb128 0x1d
  1194 0816 02       		.uleb128 0x2
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 22
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 22
 
 
  1195 0817 7D       		.byte	0x7d
@@ -1318,7 +1318,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  1249 087d 9C010000 		.4byte	.LASF119
  1250 0881 01       		.byte	0x1
  1251 0882 10       		.byte	0x10
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 23
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 23
 
 
  1252 0883 D1030000 		.4byte	0x3d1
@@ -1378,7 +1378,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  1306 08e3 1D       		.uleb128 0x1d
  1307 08e4 02       		.uleb128 0x2
  1308 08e5 7D       		.byte	0x7d
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 24
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 24
 
 
  1309 08e6 04       		.sleb128 4
@@ -1438,7 +1438,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  1363 0954 D7030000 		.4byte	0x3d7
  1364 0958 24       		.uleb128 0x24
  1365 0959 2C000000 		.4byte	0x2c
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 25
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 25
 
 
  1366 095d 24       		.uleb128 0x24
@@ -1498,7 +1498,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  1420 0025 3B       		.uleb128 0x3b
  1421 0026 0B       		.uleb128 0xb
  1422 0027 49       		.uleb128 0x49
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 26
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 26
 
 
  1423 0028 13       		.uleb128 0x13
@@ -1558,7 +1558,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  1477 005e 13       		.uleb128 0x13
  1478 005f 38       		.uleb128 0x38
  1479 0060 0B       		.uleb128 0xb
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 27
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 27
 
 
  1480 0061 00       		.byte	0
@@ -1618,7 +1618,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  1534 0097 05       		.uleb128 0x5
  1535 0098 49       		.uleb128 0x49
  1536 0099 13       		.uleb128 0x13
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 28
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 28
 
 
  1537 009a 38       		.uleb128 0x38
@@ -1678,7 +1678,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  1591 00d0 13       		.uleb128 0x13
  1592 00d1 00       		.byte	0
  1593 00d2 00       		.byte	0
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 29
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 29
 
 
  1594 00d3 12       		.uleb128 0x12
@@ -1738,7 +1738,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  1648 0109 0B       		.uleb128 0xb
  1649 010a 3A       		.uleb128 0x3a
  1650 010b 0B       		.uleb128 0xb
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 30
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 30
 
 
  1651 010c 3B       		.uleb128 0x3b
@@ -1798,7 +1798,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  1705 0143 0B       		.uleb128 0xb
  1706 0144 3B       		.uleb128 0x3b
  1707 0145 0B       		.uleb128 0xb
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 31
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 31
 
 
  1708 0146 49       		.uleb128 0x49
@@ -1858,7 +1858,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  1762 0181 00       		.byte	0
  1763 0182 00       		.byte	0
  1764 0183 1E       		.uleb128 0x1e
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 32
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 32
 
 
  1765 0184 898201   		.uleb128 0x4109
@@ -1918,7 +1918,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  1819 01be 01       		.byte	0x1
  1820 01bf 3F       		.uleb128 0x3f
  1821 01c0 19       		.uleb128 0x19
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 33
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 33
 
 
  1822 01c1 03       		.uleb128 0x3
@@ -1978,7 +1978,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  1876 01f7 19       		.uleb128 0x19
  1877 01f8 3C       		.uleb128 0x3c
  1878 01f9 19       		.uleb128 0x19
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 34
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 34
 
 
  1879 01fa 00       		.byte	0
@@ -2038,7 +2038,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  1933 0076 0100     		.2byte	0x1
  1934 0078 55       		.byte	0x55
  1935 0079 42000000 		.4byte	.LVL7
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 35
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 35
 
 
  1936 007d 48000000 		.4byte	.LFE118
@@ -2098,7 +2098,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  1990 0102 0100     		.2byte	0x1
  1991 0104 50       		.byte	0x50
  1992 0105 2E000000 		.4byte	.LVL13
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 36
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 36
 
 
  1993 0109 40000000 		.4byte	.LVL15
@@ -2158,7 +2158,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  2034      5F7400
  2035              	.LASF63:
  2036 002f 4D304152 		.ascii	"M0AR\000"
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 37
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 37
 
 
  2036      00
@@ -2218,7 +2218,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  2066      61737465 
  2066      72547261 
  2066      6E736D69 
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 38
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 38
 
 
  2066      7454696D 
@@ -2278,7 +2278,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  2096      00
  2097              	.LASF32:
  2098 0153 705F6E65 		.ascii	"p_newer\000"
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 39
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 39
 
 
  2098      77657200 
@@ -2338,7 +2338,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  2127              	.LASF7:
  2128 01e2 73686F72 		.ascii	"short unsigned int\000"
  2128      7420756E 
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 40
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 40
 
 
  2128      7369676E 
@@ -2398,7 +2398,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  2156      616D6F64 
  2156      6500
  2157              	.LASF96:
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 41
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 41
 
 
  2158 027a 4F504D4F 		.ascii	"OPMODE_I2C\000"
@@ -2458,7 +2458,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  2184      5800
  2185              	.LASF95:
  2186 030f 69326366 		.ascii	"i2cflags_t\000"
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 42
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 42
 
 
  2186      6C616773 
@@ -2518,7 +2518,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  2206      495400
  2207              	.LASF35:
  2208 043e 705F7374 		.ascii	"p_state\000"
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 43
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 43
 
 
  2208      61746500 
@@ -2578,7 +2578,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  2236              	.LASF126:
  2237 04ef 49324344 		.ascii	"I2CD1\000"
  2237      3100
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 44
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 44
 
 
  2238              	.LASF91:
@@ -2638,7 +2638,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  2263      656600
  2264              	.LASF51:
  2265 0586 636F6E74 		.ascii	"context\000"
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 45
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 45
 
 
  2265      65787400 
@@ -2697,20 +2697,20 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 1
  2297      6974696E 
  2297      6700
  2298              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s 			page 46
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s 			page 46
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 SCCB.c
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s:19     .text.SCCB_Write:0000000000000000 $t
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s:25     .text.SCCB_Write:0000000000000000 SCCB_Write
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s:87     .text.SCCB_Write:0000000000000044 $d
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s:92     .text.SCCB_Read:0000000000000000 $t
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s:98     .text.SCCB_Read:0000000000000000 SCCB_Read
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s:163    .text.SCCB_Read:0000000000000040 $d
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s:19     .text.SCCB_Write:0000000000000000 $t
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s:25     .text.SCCB_Write:0000000000000000 SCCB_Write
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s:87     .text.SCCB_Write:0000000000000044 $d
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s:92     .text.SCCB_Read:0000000000000000 $t
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s:98     .text.SCCB_Read:0000000000000000 SCCB_Read
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s:163    .text.SCCB_Read:0000000000000040 $d
                      .debug_frame:0000000000000010 $d
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s:91     .text.SCCB_Write:0000000000000048 $t
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccqgKGLD.s:167    .text.SCCB_Read:0000000000000044 $t
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s:91     .text.SCCB_Write:0000000000000048 $t
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccstyvy1.s:167    .text.SCCB_Read:0000000000000044 $t
 
 UNDEFINED SYMBOLS
 i2cAcquireBus

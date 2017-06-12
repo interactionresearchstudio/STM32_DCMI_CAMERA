@@ -170,6 +170,10 @@ static void cam_on();
 static void cam_capture();
 static void cam_save(char* filename);
 
+// Question variables
+uint16_t questionPositions[50];
+uint8_t numOfQuestions;
+
 #define SHELL_WA_SIZE   THD_WA_SIZE(2048)
 #define BUFFER_SIZE     100000               // Max Image Size
 
@@ -557,8 +561,34 @@ static void cmd_index_questions(BaseSequentialStream *chp, int argc, char *argv[
 	 * No returns.
 	 * No parameters.
 	 */
+	FIL fsrc; /* file object */
+	FRESULT err;
+
 	chprintf(chp, "Index questions\r\n");
 
+	err = f_open(&fsrc, "q.txt", FA_READ);
+	if (err != FR_OK) {
+		chprintf(chp, "Failed to open q.txt.\r\n");
+		//verbose_error(chp, err);
+		return;
+	} else {
+		chprintf(chp, "q.txt opened.\r\n");
+		numOfQuestions = 0;
+		uint16_t filesize = f_size(&fsrc);
+		uint16_t index;
+		chprintf(chp, "%d bytes in file.\r\n", filesize);
+		while (!f_eof(&fsrc)) {
+			char inString[100];
+			uint8_t numOfBytesRead;
+			f_gets(&inString, 100, &fsrc);
+			chprintf(chp, inString);
+			questionPositions[numOfQuestions] = f_tell(&fsrc);
+			numOfQuestions++;
+		}
+		chprintf(chp, "%d questions found.\r\n", numOfQuestions);
+	}
+
+	f_close(&fsrc);
 }
 
 static void cmd_get_total_questions(BaseSequentialStream *chp, int argc, char *argv[]) {

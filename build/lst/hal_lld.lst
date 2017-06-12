@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 1
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 1
   55              		.loc 1 116 0
   56 0018 5F69     		ldr	r7, [r3, #20]
   57 001a 5861     		str	r0, [r3, #20]
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 2
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s 			page 2
 
 
   58 001c 5A61     		str	r2, [r3, #20]
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 1
  112 0070 1967     		str	r1, [r3, #112]
  113              		.loc 1 60 0
  114 0072 1A67     		str	r2, [r3, #112]
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 3
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s 			page 3
 
 
  115              	.L2:
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 1
  169 0016 0B60     		str	r3, [r1]
  170              	.L11:
  171              		.loc 1 170 0 discriminator 1
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 4
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s 			page 4
 
 
  172 0018 0B68     		ldr	r3, [r1]
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 1
  226 006e 1360     		str	r3, [r2]
  227              	.L19:
  228              		.loc 1 213 0 discriminator 1
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 5
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s 			page 5
 
 
  229 0070 4B68     		ldr	r3, [r1, #4]
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 1
  282              		.file 3 "/Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/arm-none-eabi/include/s
  283              		.file 4 "../ChibiStudio/ChibiOS/os/ports/common/ARMCMx/nvic.h"
  284              		.file 5 "../ChibiStudio/ChibiOS/os/ports/common/ARMCMx/CMSIS/include/core_cm4.h"
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 6
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s 			page 6
 
 
  285              		.file 6 "../ChibiStudio/ChibiOS/os/hal/platforms/STM32F4xx/stm32f4xx.h"
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 1
  339 006c 03       		.uleb128 0x3
  340 006d 04       		.byte	0x4
  341 006e 07       		.byte	0x7
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 7
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s 			page 7
 
 
  342 006f 7E020000 		.4byte	.LASF8
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 1
  396 00db F4       		.byte	0xf4
  397 00dc 9E000000 		.4byte	0x9e
  398 00e0 08       		.byte	0x8
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 8
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s 			page 8
 
 
  399 00e1 07       		.uleb128 0x7
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 1
  453 0151 3E000000 		.4byte	.LASF27
  454 0155 04       		.byte	0x4
  455 0156 0D01     		.2byte	0x10d
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 9
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s 			page 9
 
 
  456 0158 9E000000 		.4byte	0x9e
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 1
  510 01cb 7E010000 		.4byte	0x17e
  511 01cf 0C       		.byte	0xc
  512 01d0 00       		.byte	0
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 10
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s 			page 10
 
 
  513 01d1 0A       		.uleb128 0xa
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 1
  567 0244 00       		.byte	0
  568 0245 0A       		.uleb128 0xa
  569 0246 E6030000 		.4byte	.LASF38
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 11
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s 			page 11
 
 
  570 024a 06       		.byte	0x6
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 1
  624 02bb 0C       		.byte	0xc
  625 02bc 09       		.uleb128 0x9
  626 02bd 7B000000 		.4byte	.LASF42
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 12
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s 			page 12
 
 
  627 02c1 06       		.byte	0x6
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 1
  681 0336 06       		.byte	0x6
  682 0337 6704     		.2byte	0x467
  683 0339 A9000000 		.4byte	0xa9
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 13
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s 			page 13
 
 
  684 033d 38       		.byte	0x38
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 1
  738 03b2 60       		.byte	0x60
  739 03b3 09       		.uleb128 0x9
  740 03b4 0C040000 		.4byte	.LASF61
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 14
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s 			page 14
 
 
  741 03b8 06       		.byte	0x6
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 1
  795 042a 0B010000 		.4byte	.LASF69
  796 042e 06       		.byte	0x6
  797 042f 7B04     		.2byte	0x47b
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 15
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s 			page 15
 
 
  798 0431 80020000 		.4byte	0x280
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 1
  852 0009 1B       		.uleb128 0x1b
  853 000a 0E       		.uleb128 0xe
  854 000b 55       		.uleb128 0x55
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 16
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s 			page 16
 
 
  855 000c 17       		.uleb128 0x17
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 1
  909 0042 3A       		.uleb128 0x3a
  910 0043 0B       		.uleb128 0xb
  911 0044 3B       		.uleb128 0x3b
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 17
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s 			page 17
 
 
  912 0045 0B       		.uleb128 0xb
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 1
  966 007b 0B       		.uleb128 0xb
  967 007c 3B       		.uleb128 0x3b
  968 007d 05       		.uleb128 0x5
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 18
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s 			page 18
 
 
  969 007e 49       		.uleb128 0x49
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 1
  1023 00b4 19       		.uleb128 0x19
  1024 00b5 20       		.uleb128 0x20
  1025 00b6 0B       		.uleb128 0xb
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 19
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s 			page 19
 
 
  1026 00b7 00       		.byte	0
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 1
  1080 00f1 2E       		.uleb128 0x2e
  1081 00f2 00       		.byte	0
  1082 00f3 3F       		.uleb128 0x3f
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 20
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s 			page 20
 
 
  1083 00f4 19       		.uleb128 0x19
@@ -1198,7 +1198,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 1
  1137              		.section	.debug_aranges,"",%progbits
  1138 0000 24000000 		.4byte	0x24
  1139 0004 0200     		.2byte	0x2
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 21
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s 			page 21
 
 
  1140 0006 00000000 		.4byte	.Ldebug_info0
@@ -1258,7 +1258,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 1
  1180              	.LASF63:
  1181 0034 42444352 		.ascii	"BDCR\000"
  1181      00
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 22
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s 			page 22
 
 
  1182              	.LASF28:
@@ -1318,7 +1318,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 1
  1213 00c3 44435244 		.ascii	"DCRDR\000"
  1213      5200
  1214              	.LASF68:
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 23
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s 			page 23
 
 
  1215 00c9 44434B43 		.ascii	"DCKCFGR\000"
@@ -1378,7 +1378,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 1
  1241 019e 74657277 		.ascii	"terwork -mthumb -ggdb -O2 -fomit-frame-pointer -fal"
  1241      6F726B20 
  1241      2D6D7468 
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 24
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s 			page 24
 
 
  1241      756D6220 
@@ -1438,7 +1438,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 1
  1265      69676E65 
  1265      6420696E 
  1265      7400
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 25
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s 			page 25
 
 
  1266              	.LASF74:
@@ -1498,7 +1498,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 1
  1293              	.LASF48:
  1294 033e 52455345 		.ascii	"RESERVED1\000"
  1294      52564544 
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 26
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s 			page 26
 
 
  1294      3100
@@ -1558,7 +1558,7 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 1
  1321      70654465 
  1321      6600
  1322              	.LASF76:
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 27
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s 			page 27
 
 
  1323 03f4 49544D5F 		.ascii	"ITM_RxBuffer\000"
@@ -1577,19 +1577,19 @@ ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 1
  1329 0416 4F505443 		.ascii	"OPTCR\000"
  1329      5200
  1330              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s 			page 28
+ARM GAS  /var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s 			page 28
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 hal_lld.c
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s:19     .text.hal_lld_init:0000000000000000 $t
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s:25     .text.hal_lld_init:0000000000000000 hal_lld_init
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s:131    .text.hal_lld_init:0000000000000088 $d
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s:141    .text.stm32_clock_init:0000000000000000 $t
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s:147    .text.stm32_clock_init:0000000000000000 stm32_clock_init
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s:271    .text.stm32_clock_init:00000000000000b4 $d
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s:19     .text.hal_lld_init:0000000000000000 $t
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s:25     .text.hal_lld_init:0000000000000000 hal_lld_init
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s:131    .text.hal_lld_init:0000000000000088 $d
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s:141    .text.stm32_clock_init:0000000000000000 $t
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s:147    .text.stm32_clock_init:0000000000000000 stm32_clock_init
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s:271    .text.stm32_clock_init:00000000000000b4 $d
                      .debug_frame:0000000000000010 $d
-/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccbnJFZk.s:279    .text.stm32_clock_init:00000000000000c8 $t
+/var/folders/4k/6h5l9jl178sb4hslwv3xp1mr0000gn/T//ccgVcSUi.s:279    .text.stm32_clock_init:00000000000000c8 $t
 
 UNDEFINED SYMBOLS
 dmaInit
