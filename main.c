@@ -564,7 +564,7 @@ static void cmd_index_questions(BaseSequentialStream *chp, int argc, char *argv[
 	FIL fsrc; /* file object */
 	FRESULT err;
 
-	chprintf(chp, "Index questions\r\n");
+	chprintf(chp, "Indexing questions...\r\n");
 
 	err = f_open(&fsrc, "q.txt", FA_READ);
 	if (err != FR_OK) {
@@ -582,7 +582,7 @@ static void cmd_index_questions(BaseSequentialStream *chp, int argc, char *argv[
 			uint8_t numOfBytesRead;
 			f_gets(&inString, 100, &fsrc);
 			chprintf(chp, inString);
-			questionPositions[numOfQuestions] = f_tell(&fsrc);
+			questionPositions[numOfQuestions+1] = f_tell(&fsrc);
 			numOfQuestions++;
 		}
 		chprintf(chp, "%d questions found.\r\n", numOfQuestions);
@@ -597,7 +597,7 @@ static void cmd_get_total_questions(BaseSequentialStream *chp, int argc, char *a
 	 * Returns a uint8_t through UART.
 	 * No parameters.
 	 */
-	chprintf(chp, "Total num of questions\r\n");
+	chprintf(chp, "Total num of questions: %d\r\n", numOfQuestions);
 }
 
 static void cmd_get_question(BaseSequentialStream *chp, int argc, char *argv[]) {
@@ -607,6 +607,8 @@ static void cmd_get_question(BaseSequentialStream *chp, int argc, char *argv[]) 
 	 * Parameter - The question index.
 	 */
 	uint8_t val = 0;
+	FIL fsrc; /* file object */
+	FRESULT err;
 
 	if (argc != 1) {
 		chprintf(chp, "Wrong number of arguments!\r\n");
@@ -617,6 +619,21 @@ static void cmd_get_question(BaseSequentialStream *chp, int argc, char *argv[]) 
 	if (argv[0][1] == 0) val = AsciiToHex(argv[0][0]);
 	else val = (AsciiToHex(argv[0][0]) * 10) + AsciiToHex(argv[0][1]);
 	chprintf(chp, "Getting question %d\r\n", val);
+	chprintf(chp, "Opening q.txt...\r\n");
+
+	err = f_open(&fsrc, "q.txt", FA_READ);
+	if (err != FR_OK) {
+		chprintf(chp, "Failed to open q.txt.\r\n");
+		//verbose_error(chp, err);
+		return;
+	} else {
+		chprintf(chp, "q.txt opened.\r\n");
+		char inString[100];
+		f_lseek(&fsrc, questionPositions[val]);
+		f_gets(&inString, 100, &fsrc);
+		chprintf(chp, inString);
+	}
+	f_close(&fsrc);
 }
 static void cmd_mark_question(BaseSequentialStream *chp, int argc, char *argv[]) {
 	/* Marks a question as answered in the questions file.
@@ -624,6 +641,8 @@ static void cmd_mark_question(BaseSequentialStream *chp, int argc, char *argv[])
 	 * Parameter - The question index.
 	 */
 	uint8_t val;
+	FIL fsrc; /* file object */
+	FRESULT err;
 
 	if (argc != 1) {
 		chprintf(chp, "Wrong number of arguments!\r\n");
@@ -634,6 +653,25 @@ static void cmd_mark_question(BaseSequentialStream *chp, int argc, char *argv[])
 	if (argv[0][1] == 0) val = AsciiToHex(argv[0][0]);
 	else val = (AsciiToHex(argv[0][0]) * 10) + AsciiToHex(argv[0][1]);
 	chprintf(chp, "Marking question %d\r\n", val);
+	chprintf(chp, "Opening q.txt...\r\n");
+
+	err = f_open(&fsrc, "q.txt", FA_READ | FA_WRITE);
+	if (err != FR_OK) {
+		chprintf(chp, "Failed to open q.txt.\r\n");
+		//verbose_error(chp, err);
+		return;
+	} else {
+		chprintf(chp, "q.txt opened.\r\n");
+
+		//f_lseek(&fsrc, questionPositions[val]);
+
+		while(!f_eof(&fsrc)) {
+
+		}
+
+		chprintf(chp, "Question marked.\r\n");
+	}
+	f_close(&fsrc);
 }
 
 static void cam_init() {
