@@ -585,7 +585,7 @@ static void cmd_index_questions(BaseSequentialStream *chp, int argc, char *argv[
 			questionPositions[numOfQuestions+1] = f_tell(&fsrc);
 			numOfQuestions++;
 		}
-		chprintf(chp, "%d questions found.\r\n", numOfQuestions);
+		chprintf(chp, "\r\n%d questions found.\r\n", numOfQuestions);
 	}
 
 	f_close(&fsrc);
@@ -663,11 +663,33 @@ static void cmd_mark_question(BaseSequentialStream *chp, int argc, char *argv[])
 	} else {
 		chprintf(chp, "q.txt opened.\r\n");
 
-		//f_lseek(&fsrc, questionPositions[val]);
+		uint16_t filesize = f_size(&fsrc);
 
-		while(!f_eof(&fsrc)) {
+		f_lseek(&fsrc, filesize+1);
 
+		char *inChar;
+		inChar = (char *)malloc(sizeof(char));
+
+		char thisChar;
+		char nextChar;
+
+		f_lseek(&fsrc, questionPositions[val]);
+		f_read(&fsrc, inChar, 1, 1);
+		nextChar = *inChar;
+		f_lseek(&fsrc, f_tell(&fsrc)-1);
+		f_putc('#', &fsrc);
+
+//		while(!f_eof(&fsrc)) {
+		uint16_t index;
+		for(index = questionPositions[val]; index < filesize; index++) {
+			thisChar = nextChar;
+			f_read(&fsrc, inChar, 1, 1);
+			nextChar = *inChar;
+			f_lseek(&fsrc, f_tell(&fsrc)-1);
+			f_putc(thisChar, &fsrc);
 		}
+		//f_lseek(&fsrc, f_tell(&fsrc)+1);
+		//f_putc(nextChar, &fsrc);
 
 		chprintf(chp, "Question marked.\r\n");
 	}
