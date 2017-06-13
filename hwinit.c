@@ -66,6 +66,10 @@ void hwInit(void) {
   /* initialize serial output */
   sdStart(&SD2, &uart2_config);
 
+  /* Camera button input */
+  palSetPadMode(GPIOD, 2, PAL_MODE_INPUT_PULLUP);
+  palSetPadMode(GPIOB, 3, PAL_MODE_OUTPUT_PUSHPULL);
+
   /* Setup alternate function for DCMI pins - DCMI is AF13 */
   palSetPadMode(GPIOC, 6, PAL_MODE_ALTERNATE(13)); // D0
   palSetPadMode(GPIOC, 7, PAL_MODE_ALTERNATE(13)); // D1

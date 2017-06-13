@@ -25,6 +25,8 @@
 #include "evtimer.h"
 #include "ff.h"
 
+//#define DEBUG
+
 /*SD CARD */
 #define POLLING_INTERVAL                10
 #define POLLING_DELAY                   10
@@ -100,18 +102,6 @@ static SPIConfig ls_spicfg = { NULL, GPIOB, GPIOB_PIN12, SPI_CR1_BR_2
 /* MMC/SD over SPI driver configuration.*/
 static MMCConfig mmccfg = { &SPID2, &ls_spicfg, &hs_spicfg };
 
-static WORKING_AREA(waThread1, 128);
-static msg_t Thread1(void *arg) {
-
-	(void) arg;
-	chRegSetThreadName("blinker");
-	while (TRUE) {
-		palTogglePad(GPIOD, GPIOD_LED4);
-		chThdSleepMilliseconds(fs_ready ? 125 : 500);
-	}
-	return 0;
-}
-
 static void InsertHandler(eventid_t id) {
 	FRESULT err;
 
@@ -165,10 +155,10 @@ static void cmd_get_question(BaseSequentialStream *chp, int argc, char *argv[]);
 static void cmd_mark_question(BaseSequentialStream *chp, int argc, char *argv[]);
 
 static uint8_t AsciiToHex(char c);
-static void cam_init();
-static void cam_on();
-static void cam_capture();
-static void cam_save(char* filename);
+static uint8_t cam_init();
+static uint8_t cam_on();
+static uint8_t cam_capture();
+static uint8_t cam_save(char* filename);
 
 // Question variables
 uint16_t questionPositions[50];
@@ -189,6 +179,39 @@ static const ShellCommand commands[] = { { "mem", cmd_mem }, { "threads",
 
 static const ShellConfig shell_cfg1 =
 		{ (BaseSequentialStream *) &SD2, commands };
+
+static WORKING_AREA(waThread1, 128);
+static msg_t Thread1(void *arg) {
+
+//	(void) arg;
+//	chRegSetThreadName("blinker");
+//	while (TRUE) {
+//		palTogglePad(GPIOD, GPIOD_LED4);
+//		chThdSleepMilliseconds(fs_ready ? 125 : 500);
+//	}
+//	return 0;
+
+	(void) arg;
+	chRegSetThreadName("btnthread");
+	palClearPad(GPIOB, 3);
+	while (TRUE) {
+		uint8_t btnval = palReadPad(GPIOD, 2);
+		if(!btnval) {
+			palSetPad(GPIOB, 3);
+			cam_on();
+			chThdSleepMilliseconds(1000);
+			cam_init();
+			chThdSleepMilliseconds(1000);
+			cam_capture();
+			chThdSleepMilliseconds(1000);
+			//cam_save("SWITCH.jpg");
+			//chThdSleepMilliseconds(1000);
+			palClearPad(GPIOB, 3);
+
+		}
+	}
+	return 0;
+}
 
 int FrameCount = 0; // Number of frames received
 
@@ -297,13 +320,17 @@ static void cmd_mem(BaseSequentialStream *chp, int argc, char *argv[]) {
 
 	(void) argv;
 	if (argc > 0) {
+#ifdef DEBUG
 		chprintf(chp, "Usage: mem\r\n");
+#endif
 		return;
 	}
 	n = chHeapStatus(NULL, &size);
+#ifdef DEBUG
 	chprintf(chp, "core free memory : %u bytes\r\n", chCoreStatus());
 	chprintf(chp, "heap fragments   : %u\r\n", n);
 	chprintf(chp, "heap free total  : %u bytes\r\n", size);
+#endif
 }
 
 static void cmd_threads(BaseSequentialStream *chp, int argc, char *argv[]) {
@@ -312,16 +339,22 @@ static void cmd_threads(BaseSequentialStream *chp, int argc, char *argv[]) {
 
 	(void) argv;
 	if (argc > 0) {
+#ifdef DEBUG
 		chprintf(chp, "Usage: threads\r\n");
+#endif
 		return;
 	}
+#ifdef DEBUG
 	chprintf(chp, "    addr    stack prio refs     state time\r\n");
+#endif
 	tp = chRegFirstThread();
 	do {
+#ifdef DEBUG
 		chprintf(chp, "%.8lx %.8lx %4lu %4lu %9s %lu\r\n", (uint32_t) tp,
 				(uint32_t) tp->p_ctx.r13, (uint32_t) tp->p_prio,
 				(uint32_t) (tp->p_refs - 1), states[tp->p_state],
 				(uint32_t) tp->p_time);
+#endif
 		tp = chRegNextThread(tp);
 	} while (tp != NULL);
 }
@@ -333,6 +366,7 @@ static void cmd_cam_id(BaseSequentialStream *chp, int argc, char *argv[]) {
 	(void) argv;
 	uint8_t val;
 	/* Jump to DSP bank of camera regs */
+#ifdef DEBUG
 	chprintf(chp, "Reading Cam ID Registers\r\n");
 	if (cam_write_reg(0xFF, 0x01) != 0) {
 		chprintf(chp, "Error setting page\r\n");
@@ -347,6 +381,7 @@ static void cmd_cam_id(BaseSequentialStream *chp, int argc, char *argv[]) {
 	} else {
 		chprintf(chp, "Cam ID low is: %x\r\n", val);
 	}
+#endif
 }
 
 static void cmd_cam_init(BaseSequentialStream *chp, int argc, char *argv[]) {
@@ -367,7 +402,9 @@ static void cmd_cam_off(BaseSequentialStream *chp, int argc, char *argv[]) {
 	 */
 	(void) argc;
 	(void) argv;
+#ifdef DEBUG
 	chprintf(chp, "Turning CAM OFF\r\n");
+#endif
 	/* Stop the clock */
 	palSetPadMode(GPIOA, 8, PAL_MODE_OUTPUT_OPENDRAIN); palSetPad(GPIOA, 8);
 
@@ -379,7 +416,9 @@ static void cmd_cam_off(BaseSequentialStream *chp, int argc, char *argv[]) {
 	/* Drive the power supply enable signals LOW here! */
 	power = 0;
 	init = 0;
+#ifdef DEBUG
 	chprintf(chp, "Camera is OFF\r\n");
+#endif
 }
 
 static void cmd_cam_on(BaseSequentialStream *chp, int argc, char *argv[]) {
@@ -389,8 +428,13 @@ static void cmd_cam_on(BaseSequentialStream *chp, int argc, char *argv[]) {
 	 */
 	(void) argc;
 	(void) argv;
+#ifdef DEBUG
 	chprintf(chp, "Setting CAM ON\r\n");
-	cam_on();
+#endif
+	char result = cam_on();
+#ifndef DEBUG
+	chprintf(chp, result);
+#endif
 }
 
 static void cmd_cam_reset(BaseSequentialStream *chp, int argc, char *argv[]) {
@@ -420,8 +464,10 @@ static void cmd_cam_capture(BaseSequentialStream *chp, int argc, char *argv[]) {
 	(void) argc;
 	(void) argv;
 
-	cam_capture();
+	char result = cam_capture();
+#ifdef DEBUG
 	chprintf(chp, "Image capture complete.\r\n");
+#endif
 }
 
 static void cmd_cam_save(BaseSequentialStream *chp, int argc, char *argv[]) {
@@ -461,10 +507,16 @@ static void cmd_cam_save(BaseSequentialStream *chp, int argc, char *argv[]) {
 		i++;
 	}
 
+#ifdef DEBUG
 	chprintf(chp, filename);
 	chprintf(chp, " being saved...\r\n");
+#endif
 
-	cam_save(filename);
+	char result = cam_save(filename);
+
+#ifndef DEBUG
+	chprintf(chp, result);
+#endif
 }
 
 static void cmd_cam_status(BaseSequentialStream *chp, int argc, char *argv[]) {
@@ -564,31 +616,49 @@ static void cmd_index_questions(BaseSequentialStream *chp, int argc, char *argv[
 	FIL fsrc; /* file object */
 	FRESULT err;
 
+#ifdef DEBUG
 	chprintf(chp, "Indexing questions...\r\n");
+#endif
 
 	err = f_open(&fsrc, "q.txt", FA_READ);
 	if (err != FR_OK) {
+#ifdef DEBUG
 		chprintf(chp, "Failed to open q.txt.\r\n");
+#else
+		chprintf(chp, 0x15);
+#endif
 		//verbose_error(chp, err);
 		return;
 	} else {
+#ifdef DEBUG
 		chprintf(chp, "q.txt opened.\r\n");
+#endif
 		numOfQuestions = 0;
 		uint16_t filesize = f_size(&fsrc);
 		uint16_t index;
+#ifdef DEBUG
 		chprintf(chp, "%d bytes in file.\r\n", filesize);
+#endif
 		while (!f_eof(&fsrc)) {
 			char inString[100];
 			uint8_t numOfBytesRead;
 			f_gets(&inString, 100, &fsrc);
+#ifdef DEBUG
 			chprintf(chp, inString);
+#endif
 			questionPositions[numOfQuestions+1] = f_tell(&fsrc);
 			numOfQuestions++;
 		}
+#ifdef DEBUG
 		chprintf(chp, "\r\n%d questions found.\r\n", numOfQuestions);
+#endif
 	}
 
 	f_close(&fsrc);
+
+#ifndef DEBUG
+	chprintf(chp, 0x06);
+#endif
 }
 
 static void cmd_get_total_questions(BaseSequentialStream *chp, int argc, char *argv[]) {
@@ -597,7 +667,11 @@ static void cmd_get_total_questions(BaseSequentialStream *chp, int argc, char *a
 	 * Returns a uint8_t through UART.
 	 * No parameters.
 	 */
+#ifdef DEBUG
 	chprintf(chp, "Total num of questions: %d\r\n", numOfQuestions);
+#else
+	chprintf(chp, "%d\r\n", numOfQuestions);
+#endif
 }
 
 static void cmd_get_question(BaseSequentialStream *chp, int argc, char *argv[]) {
@@ -611,29 +685,44 @@ static void cmd_get_question(BaseSequentialStream *chp, int argc, char *argv[]) 
 	FRESULT err;
 
 	if (argc != 1) {
+#ifdef DEBUG
 		chprintf(chp, "Wrong number of arguments!\r\n");
 		chprintf(chp, "Enter: get_question AA, where AA is an integer from 1 to 99\r\n");
+#else
+		chprintf(chp, 0x15);
+#endif
 		return;
 	}
 
 	if (argv[0][1] == 0) val = AsciiToHex(argv[0][0]);
 	else val = (AsciiToHex(argv[0][0]) * 10) + AsciiToHex(argv[0][1]);
+#ifdef DEBUG
 	chprintf(chp, "Getting question %d\r\n", val);
 	chprintf(chp, "Opening q.txt...\r\n");
+#endif
 
 	err = f_open(&fsrc, "q.txt", FA_READ);
 	if (err != FR_OK) {
+#ifdef DEBUG
 		chprintf(chp, "Failed to open q.txt.\r\n");
+#else
+		chprintf(chp, 0x15);
+#endif
 		//verbose_error(chp, err);
 		return;
 	} else {
+#ifdef DEBUG
 		chprintf(chp, "q.txt opened.\r\n");
+#endif
 		char inString[100];
 		f_lseek(&fsrc, questionPositions[val]);
 		f_gets(&inString, 100, &fsrc);
 		chprintf(chp, inString);
 	}
 	f_close(&fsrc);
+#ifndef DEBUG
+	chprintf(chp, 0x06);
+#endif
 }
 static void cmd_mark_question(BaseSequentialStream *chp, int argc, char *argv[]) {
 	/* Marks a question as answered in the questions file.
@@ -645,24 +734,35 @@ static void cmd_mark_question(BaseSequentialStream *chp, int argc, char *argv[])
 	FRESULT err;
 
 	if (argc != 1) {
+#ifdef DEBUG
 		chprintf(chp, "Wrong number of arguments!\r\n");
 		chprintf(chp, "Enter: mark_question n, where n is an integer from 1 to 99\r\n");
+#else
+		chprintf(chp, 0x15);
+#endif
 		return;
 	}
 
 	if (argv[0][1] == 0) val = AsciiToHex(argv[0][0]);
 	else val = (AsciiToHex(argv[0][0]) * 10) + AsciiToHex(argv[0][1]);
+#ifdef DEBUG
 	chprintf(chp, "Marking question %d\r\n", val);
 	chprintf(chp, "Opening q.txt...\r\n");
+#endif
 
 	err = f_open(&fsrc, "q.txt", FA_READ | FA_WRITE);
 	if (err != FR_OK) {
+#ifdef DEBUG
 		chprintf(chp, "Failed to open q.txt.\r\n");
+#else
+		chprintf(chp, 0x15);
+#endif
 		//verbose_error(chp, err);
 		return;
 	} else {
+#ifdef DEBUG
 		chprintf(chp, "q.txt opened.\r\n");
-
+#endif
 		uint16_t filesize = f_size(&fsrc);
 
 		f_lseek(&fsrc, filesize+1);
@@ -679,7 +779,6 @@ static void cmd_mark_question(BaseSequentialStream *chp, int argc, char *argv[])
 		f_lseek(&fsrc, f_tell(&fsrc)-1);
 		f_putc('#', &fsrc);
 
-//		while(!f_eof(&fsrc)) {
 		uint16_t index;
 		for(index = questionPositions[val]; index < filesize; index++) {
 			thisChar = nextChar;
@@ -688,15 +787,16 @@ static void cmd_mark_question(BaseSequentialStream *chp, int argc, char *argv[])
 			f_lseek(&fsrc, f_tell(&fsrc)-1);
 			f_putc(thisChar, &fsrc);
 		}
-		//f_lseek(&fsrc, f_tell(&fsrc)+1);
-		//f_putc(nextChar, &fsrc);
-
-		chprintf(chp, "Question marked.\r\n");
 	}
 	f_close(&fsrc);
+#ifdef DEBUG
+	chprintf(chp, "Question marked.\r\n");
+#else
+	chprintf(chp, 0x06);
+#endif
 }
 
-static void cam_init() {
+static uint8_t cam_init() {
 	/* Send the required arrays to init and set the cam to JPEG output */
 	if (cam_write_array(ov2640_reset_regs) != 0) {
 		//chprintf(chp, "reset regs write failed\r\n");
@@ -760,13 +860,15 @@ static void cam_init() {
 	if (error != 0x00) {
 		//chprintf(chp, "CAM Init Failed.\r\n");
 		init = 0;
+		return 0x15;
 	} else {
 		//chprintf(chp, "CAM Init Completed.\r\n");
 		init = 1;
+		return 0x06;
 	}
 }
 
-static void cam_on() {
+static uint8_t cam_on() {
 	/* Apply Clock */
 	pwmEnableChannel(&PWMD1, 0, 2);
 	init = 0;
@@ -774,9 +876,10 @@ static void cam_on() {
 	busy = 0;
 	power = 1;
 	/* Define power supply ENABLE pins and then assert them here! */
+	return 0x06;
 }
 
-static void cam_capture() {
+static uint8_t cam_capture() {
 	busy = 1;
 	dcmiStart(&DCMID1, &dcmicfg);
 	chThdSleepMilliseconds(250);
@@ -786,9 +889,10 @@ static void cam_capture() {
 	//chprintf(chp, "Image Capture Complete\r\n", dmaStreamGetTransactionSize(DCMID1.dmarx));
 	busy = 0;
 	captured = 1;
+	return 0x06;
 }
 
-static void cam_save(char* filename) {
+static uint8_t cam_save(char* filename) {
 	FIL fsrc; /* file object */
 	FRESULT err;
 
@@ -796,7 +900,7 @@ static void cam_save(char* filename) {
 	if (err != FR_OK) {
 		//chprintf(chp, "FS: f_open(\"hello.txt\") failed.\r\n");
 		//	verbose_error(chp, err);
-		return;
+		return 0x15;
 	} else {
 		//chprintf(chp, "FS: f_open(\"hello.txt\") succeeded\r\n");
 	}
@@ -836,6 +940,7 @@ static void cam_save(char* filename) {
 	chThdSleepMilliseconds(250); palTogglePad(GPIOD, 13);
 
 	captured = 0;
+	return 0x06;
 }
 
 static uint8_t AsciiToHex(char c) {
