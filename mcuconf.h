@@ -30,6 +30,8 @@
 
 #define STM32F4xx_MCUCONF
 
+#define SHELL_CMD_ECHO_ENABLED              FALSE
+
 /*
  * HAL driver system settings.
  */

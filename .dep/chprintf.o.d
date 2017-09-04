@@ -1,114 +1,102 @@
-build/obj/chprintf.o: ../ChibiStudio/ChibiOS/os/various/chprintf.c \
- ../ChibiStudio/ChibiOS/os/kernel/include/ch.h chconf.h \
- ../ChibiStudio/ChibiOS/os/ports/GCC/ARMCMx/chtypes.h \
- /Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/lib/gcc/arm-none-eabi/4.8.3/include/stddef.h \
- /Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/lib/gcc/arm-none-eabi/4.8.3/include/stdint.h \
- /Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/arm-none-eabi/include/stdint.h \
- /Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/arm-none-eabi/include/machine/_default_types.h \
- /Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/arm-none-eabi/include/sys/features.h \
- /Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/lib/gcc/arm-none-eabi/4.8.3/include/stdbool.h \
- ../ChibiStudio/ChibiOS/os/kernel/include/chlists.h \
- ../ChibiStudio/ChibiOS/os/ports/GCC/ARMCMx/chcore.h \
- ../ChibiStudio/ChibiOS/os/ports/GCC/ARMCMx/STM32F4xx/cmparams.h \
- ../ChibiStudio/ChibiOS/os/ports/GCC/ARMCMx/chcore_v7m.h \
- ../ChibiStudio/ChibiOS/os/ports/common/ARMCMx/nvic.h \
- ../ChibiStudio/ChibiOS/os/kernel/include/chsys.h \
- ../ChibiStudio/ChibiOS/os/kernel/include/chvt.h \
- ../ChibiStudio/ChibiOS/os/kernel/include/chschd.h \
- ../ChibiStudio/ChibiOS/os/kernel/include/chsem.h \
- ../ChibiStudio/ChibiOS/os/kernel/include/chbsem.h \
- ../ChibiStudio/ChibiOS/os/kernel/include/chmtx.h \
- ../ChibiStudio/ChibiOS/os/kernel/include/chcond.h \
- ../ChibiStudio/ChibiOS/os/kernel/include/chevents.h \
- ../ChibiStudio/ChibiOS/os/kernel/include/chmsg.h \
- ../ChibiStudio/ChibiOS/os/kernel/include/chmboxes.h \
- ../ChibiStudio/ChibiOS/os/kernel/include/chmemcore.h \
- ../ChibiStudio/ChibiOS/os/kernel/include/chheap.h \
- ../ChibiStudio/ChibiOS/os/kernel/include/chmempools.h \
- ../ChibiStudio/ChibiOS/os/kernel/include/chthreads.h \
- ../ChibiStudio/ChibiOS/os/kernel/include/chdynamic.h \
- ../ChibiStudio/ChibiOS/os/kernel/include/chregistry.h \
- ../ChibiStudio/ChibiOS/os/kernel/include/chinline.h \
- ../ChibiStudio/ChibiOS/os/kernel/include/chqueues.h \
- ../ChibiStudio/ChibiOS/os/kernel/include/chstreams.h \
- ../ChibiStudio/ChibiOS/os/kernel/include/chfiles.h \
- ../ChibiStudio/ChibiOS/os/kernel/include/chdebug.h \
- ../ChibiStudio/ChibiOS/os/various/chprintf.h \
- /Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/lib/gcc/arm-none-eabi/4.8.3/include/stdarg.h \
- ../ChibiStudio/ChibiOS/os/various/memstreams.h
+build/obj/chprintf.o: ../../os/various/chprintf.c \
+ ../../os/kernel/include/ch.h chconf.h \
+ ../../os/ports/GCC/ARMCMx/chtypes.h \
+ /Users/Andy/eclipse_chibi/gcc-arm-none-eabi-4_8-2014q1/lib/gcc/arm-none-eabi/4.8.3/include/stddef.h \
+ /Users/Andy/eclipse_chibi/gcc-arm-none-eabi-4_8-2014q1/lib/gcc/arm-none-eabi/4.8.3/include/stdint.h \
+ /Users/Andy/eclipse_chibi/gcc-arm-none-eabi-4_8-2014q1/arm-none-eabi/include/stdint.h \
+ /Users/Andy/eclipse_chibi/gcc-arm-none-eabi-4_8-2014q1/arm-none-eabi/include/machine/_default_types.h \
+ /Users/Andy/eclipse_chibi/gcc-arm-none-eabi-4_8-2014q1/arm-none-eabi/include/sys/features.h \
+ /Users/Andy/eclipse_chibi/gcc-arm-none-eabi-4_8-2014q1/lib/gcc/arm-none-eabi/4.8.3/include/stdbool.h \
+ ../../os/kernel/include/chlists.h ../../os/ports/GCC/ARMCMx/chcore.h \
+ ../../os/ports/GCC/ARMCMx/STM32F4xx/cmparams.h \
+ ../../os/ports/GCC/ARMCMx/chcore_v7m.h \
+ ../../os/ports/common/ARMCMx/nvic.h ../../os/kernel/include/chsys.h \
+ ../../os/kernel/include/chvt.h ../../os/kernel/include/chschd.h \
+ ../../os/kernel/include/chsem.h ../../os/kernel/include/chbsem.h \
+ ../../os/kernel/include/chmtx.h ../../os/kernel/include/chcond.h \
+ ../../os/kernel/include/chevents.h ../../os/kernel/include/chmsg.h \
+ ../../os/kernel/include/chmboxes.h ../../os/kernel/include/chmemcore.h \
+ ../../os/kernel/include/chheap.h ../../os/kernel/include/chmempools.h \
+ ../../os/kernel/include/chthreads.h ../../os/kernel/include/chdynamic.h \
+ ../../os/kernel/include/chregistry.h ../../os/kernel/include/chinline.h \
+ ../../os/kernel/include/chqueues.h ../../os/kernel/include/chstreams.h \
+ ../../os/kernel/include/chfiles.h ../../os/kernel/include/chdebug.h \
+ ../../os/various/chprintf.h \
+ /Users/Andy/eclipse_chibi/gcc-arm-none-eabi-4_8-2014q1/lib/gcc/arm-none-eabi/4.8.3/include/stdarg.h \
+ ../../os/various/memstreams.h
 
-../ChibiStudio/ChibiOS/os/kernel/include/ch.h:
+../../os/kernel/include/ch.h:
 
 chconf.h:
 
-../ChibiStudio/ChibiOS/os/ports/GCC/ARMCMx/chtypes.h:
+../../os/ports/GCC/ARMCMx/chtypes.h:
 
-/Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/lib/gcc/arm-none-eabi/4.8.3/include/stddef.h:
+/Users/Andy/eclipse_chibi/gcc-arm-none-eabi-4_8-2014q1/lib/gcc/arm-none-eabi/4.8.3/include/stddef.h:
 
-/Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/lib/gcc/arm-none-eabi/4.8.3/include/stdint.h:
+/Users/Andy/eclipse_chibi/gcc-arm-none-eabi-4_8-2014q1/lib/gcc/arm-none-eabi/4.8.3/include/stdint.h:
 
-/Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/arm-none-eabi/include/stdint.h:
+/Users/Andy/eclipse_chibi/gcc-arm-none-eabi-4_8-2014q1/arm-none-eabi/include/stdint.h:
 
-/Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/arm-none-eabi/include/machine/_default_types.h:
+/Users/Andy/eclipse_chibi/gcc-arm-none-eabi-4_8-2014q1/arm-none-eabi/include/machine/_default_types.h:
 
-/Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/arm-none-eabi/include/sys/features.h:
+/Users/Andy/eclipse_chibi/gcc-arm-none-eabi-4_8-2014q1/arm-none-eabi/include/sys/features.h:
 
-/Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/lib/gcc/arm-none-eabi/4.8.3/include/stdbool.h:
+/Users/Andy/eclipse_chibi/gcc-arm-none-eabi-4_8-2014q1/lib/gcc/arm-none-eabi/4.8.3/include/stdbool.h:
 
-../ChibiStudio/ChibiOS/os/kernel/include/chlists.h:
+../../os/kernel/include/chlists.h:
 
-../ChibiStudio/ChibiOS/os/ports/GCC/ARMCMx/chcore.h:
+../../os/ports/GCC/ARMCMx/chcore.h:
 
-../ChibiStudio/ChibiOS/os/ports/GCC/ARMCMx/STM32F4xx/cmparams.h:
+../../os/ports/GCC/ARMCMx/STM32F4xx/cmparams.h:
 
-../ChibiStudio/ChibiOS/os/ports/GCC/ARMCMx/chcore_v7m.h:
+../../os/ports/GCC/ARMCMx/chcore_v7m.h:
 
-../ChibiStudio/ChibiOS/os/ports/common/ARMCMx/nvic.h:
+../../os/ports/common/ARMCMx/nvic.h:
 
-../ChibiStudio/ChibiOS/os/kernel/include/chsys.h:
+../../os/kernel/include/chsys.h:
 
-../ChibiStudio/ChibiOS/os/kernel/include/chvt.h:
+../../os/kernel/include/chvt.h:
 
-../ChibiStudio/ChibiOS/os/kernel/include/chschd.h:
+../../os/kernel/include/chschd.h:
 
-../ChibiStudio/ChibiOS/os/kernel/include/chsem.h:
+../../os/kernel/include/chsem.h:
 
-../ChibiStudio/ChibiOS/os/kernel/include/chbsem.h:
+../../os/kernel/include/chbsem.h:
 
-../ChibiStudio/ChibiOS/os/kernel/include/chmtx.h:
+../../os/kernel/include/chmtx.h:
 
-../ChibiStudio/ChibiOS/os/kernel/include/chcond.h:
+../../os/kernel/include/chcond.h:
 
-../ChibiStudio/ChibiOS/os/kernel/include/chevents.h:
+../../os/kernel/include/chevents.h:
 
-../ChibiStudio/ChibiOS/os/kernel/include/chmsg.h:
+../../os/kernel/include/chmsg.h:
 
-../ChibiStudio/ChibiOS/os/kernel/include/chmboxes.h:
+../../os/kernel/include/chmboxes.h:
 
-../ChibiStudio/ChibiOS/os/kernel/include/chmemcore.h:
+../../os/kernel/include/chmemcore.h:
 
-../ChibiStudio/ChibiOS/os/kernel/include/chheap.h:
+../../os/kernel/include/chheap.h:
 
-../ChibiStudio/ChibiOS/os/kernel/include/chmempools.h:
+../../os/kernel/include/chmempools.h:
 
-../ChibiStudio/ChibiOS/os/kernel/include/chthreads.h:
+../../os/kernel/include/chthreads.h:
 
-../ChibiStudio/ChibiOS/os/kernel/include/chdynamic.h:
+../../os/kernel/include/chdynamic.h:
 
-../ChibiStudio/ChibiOS/os/kernel/include/chregistry.h:
+../../os/kernel/include/chregistry.h:
 
-../ChibiStudio/ChibiOS/os/kernel/include/chinline.h:
+../../os/kernel/include/chinline.h:
 
-../ChibiStudio/ChibiOS/os/kernel/include/chqueues.h:
+../../os/kernel/include/chqueues.h:
 
-../ChibiStudio/ChibiOS/os/kernel/include/chstreams.h:
+../../os/kernel/include/chstreams.h:
 
-../ChibiStudio/ChibiOS/os/kernel/include/chfiles.h:
+../../os/kernel/include/chfiles.h:
 
-../ChibiStudio/ChibiOS/os/kernel/include/chdebug.h:
+../../os/kernel/include/chdebug.h:
 
-../ChibiStudio/ChibiOS/os/various/chprintf.h:
+../../os/various/chprintf.h:
 
-/Users/mikevanis/Documents/workspace/gcc-arm-none-eabi-4_8-2014q1/lib/gcc/arm-none-eabi/4.8.3/include/stdarg.h:
+/Users/Andy/eclipse_chibi/gcc-arm-none-eabi-4_8-2014q1/lib/gcc/arm-none-eabi/4.8.3/include/stdarg.h:
 
-../ChibiStudio/ChibiOS/os/various/memstreams.h:
+../../os/various/memstreams.h:
