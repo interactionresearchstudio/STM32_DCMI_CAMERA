@@ -152,7 +152,6 @@ uint8_t numOfQuestions;
 #define BUFFER_SIZE     100000               // Max Image Size
 
 static WORKING_AREA(waThread2, 2048);
-
 static msg_t uart_receiver_thread(void *arg)
 {
   (void) arg;
@@ -164,8 +163,6 @@ static msg_t uart_receiver_thread(void *arg)
     			//'~' If does not require input data
     			if(buf[1] == (uint8_t)0x2B){
     				//get question total and index them '+'
-    				//uint8_t ok = index_questions();
-
     				uint8_t ok = index_questions();
     				if(ok == (uint8_t)21){
     					//FAILED
@@ -981,14 +978,7 @@ static uint8_t cam_save(char* filename) {
 	} else {
 		//chprintf(chp, "FS: f_open(\"hello.txt\") succeeded\r\n");
 	}
-	/*
-	 * Write text to the file.
-	 */
 
-	/*
-	 * In this loop, we should have an overflow condition - if we've reached
-	 * 100K, we're overflown, so we should return an error.
-	 */
 	uint32_t i;
 	for (i = 0; i < BUFFER_SIZE; i++) {
 		if ((ImageBuffer[i] == 0xFF) && (ImageBuffer[i + 1] == 0xD9)) {
@@ -999,18 +989,6 @@ static uint8_t cam_save(char* filename) {
 		}
 		f_putc(ImageBuffer[i], &fsrc);
 	}
-
-	/*
-	 written = f_puts ("HELLO WORLD", &fsrc);
-	 if (written == -1) {
-	 chprintf(chp, "FS: f_puts(\"Hello World\",\"hello.txt\") failed\r\n");
-	 } else {
-	 chprintf(chp, "FS: f_puts(\"Hello World\",\"hello.txt\") succeeded\r\n");
-	 }
-	 */
-	/*
-	 * Close the file
-	 */
 	f_close(&fsrc);
 	palTogglePad(GPIOD, 13);
 	chThdSleepMilliseconds(250); palTogglePad(GPIOD, 13);
@@ -1035,7 +1013,7 @@ static uint8_t index_questions(void) {
 		while (!f_eof(&fsrc)) {
 			char inString[500];
 			uint8_t numOfBytesRead;
-			f_gets(&inString, 100, &fsrc);
+			f_gets(&inString, 128, &fsrc);
 			questionPositions[numOfQuestions+1] = f_tell(&fsrc);
 			numOfQuestions++;
 		}
@@ -1086,7 +1064,7 @@ static void cmd_mark_question(uint8_t val) {
 
 	err = f_open(&fsrc, "q.txt", FA_READ | FA_WRITE);
 	if (err != FR_OK) {
-
+	} else {
 		uint16_t filesize = f_size(&fsrc);
 
 		f_lseek(&fsrc, filesize+1);
