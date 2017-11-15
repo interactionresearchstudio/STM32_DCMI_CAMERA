@@ -141,6 +141,7 @@ static uint8_t index_questions(void);
 static uint8_t get_total_questions(void);
 static char* get_question(uint8_t q);
 static void cmd_mark_question(uint8_t val);
+static char cam_ticked_questions(uint8_t q);
 
 
 
@@ -194,35 +195,65 @@ static msg_t uart_receiver_thread(void *arg)
     				sdWriteTimeout(&SD2,(uint8_t *) buffer1, 64, TIME_INFINITE);
     		} else if(buf[0] == (uint8_t)0x21){
     			char picNum = buf[1];
+    			char questionAmount = cam_ticked_questions(currQuestion);
     				//take a picture '!'
     				char fn[10] = {'Q','0','0','-','0','0','.','j','p','g'};
     				cam_capture();
     				chThdSleepMilliseconds(1000);
     				cmd_mark_question((uint8_t)picNum);
     				if(picNum < 10){
+    					if(questionAmount < 10){
     							fn[0] = 'Q';
     							fn[1] = '0';
     							fn[2] = (char)picNum+48;
     							fn[3] = '-';
     							fn[4] = '0';
-    							fn[5] = '0';
+    							fn[5] = (char)questionAmount+48;
     							fn[6] = '.';
     							fn[7] = 'j';
     							fn[8] = 'p';
     							fn[9] = 'g';
+    					} else {
+    							int picDiv = (char)questionAmount/10;
+    						    fn[0] = 'Q';
+    						    fn[1] = '0';
+    						    fn[2] = (char)picNum+48;
+    						    fn[3] = '-';
+    						    fn[4] = (char)picDiv+48;
+    						    fn[5] = (char)(questionAmount-(picDiv*10)+48);
+    						    fn[6] = '.';
+    						    fn[7] = 'j';
+    						    fn[8] = 'p';
+    						    fn[9] = 'g';
+    					}
 
     				} else if(picNum < 100 && picNum > 9) {
+    					if(questionAmount < 10){
     							int div = (char)picNum/10;
     							fn[0] = 'Q';
     							fn[1] = (char)div+48;
     							fn[2] = (char)(picNum-(div*10)+48);
     							fn[3] = '-';
     							fn[4] = '0';
-    							fn[5] = '0';
+    							fn[5] = (char)questionAmount+48;
     							fn[6] = '.';
     							fn[7] = 'j';
     							fn[8] = 'p';
     							fn[9] = 'g';
+    					} else {
+    							int picDiv = (char)questionAmount/10;
+    							int div = (char)picNum/10;
+    							fn[0] = 'Q';
+    							fn[1] = (char)div+48;
+    						    fn[2] = (char)(picNum-(div*10)+48);
+    						    fn[3] = '-';
+    						    fn[4] = (char)picDiv+48;
+    						    fn[5] = (char)(questionAmount-(picDiv*10)+48);
+    						    fn[6] = '.';
+    						    fn[7] = 'j';
+    						    fn[8] = 'p';
+    						    fn[9] = 'g';
+    					}
     				}
     				cam_save(fn);
     				uint8_t outBuff[1] = {0x06};
@@ -928,6 +959,7 @@ static uint8_t cam_init(void) {
 	}
 
 	if (cam_write_array(ov2640_autolight) != 0) {
+	//if (cam_write_array(ov2640_office) != 0) {
 		//chprintf(chp, "autolight failed");
 	}
 
@@ -1082,7 +1114,7 @@ static void cmd_mark_question(uint8_t val) {
 		f_putc('#', &fsrc);
 
 		uint16_t index;
-		for(index = questionPositions[val]; index < filesize; index++) {
+		for(index = questionPositions[(int)val]; index < filesize; index++) {
 			thisChar = nextChar;
 			f_read(&fsrc, inChar, 1, 1);
 			nextChar = *inChar;
@@ -1091,6 +1123,32 @@ static void cmd_mark_question(uint8_t val) {
 		}
 	}
 	f_close(&fsrc);
+}
+
+static char cam_ticked_questions(uint8_t q){
+	char inString[64];
+	char i;
+	for(i = 0; i < 64; i++){
+		inString[i] = 0;
+	}
+	uint8_t val = 0;
+	FIL fsrc; /* file object */
+	FRESULT err;
+	val = q;
+	err = f_open(&fsrc, "q.txt", FA_READ);
+	if (err != FR_OK) {
+		//chprintf(chp, 0x15); SERIAL ERROR
+	} else {
+		f_lseek(&fsrc, questionPositions[val]);
+		f_gets(&inString, 64, &fsrc);
+
+	}
+	f_close(&fsrc);
+	uint8_t ticks = 0;
+	while(inString[ticks] == '#' && ticks < 64){
+		ticks++;
+	}
+	return ticks;
 }
 
 
