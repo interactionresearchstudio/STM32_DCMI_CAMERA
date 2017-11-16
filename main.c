@@ -141,8 +141,7 @@ static uint8_t index_questions(void);
 static uint8_t get_total_questions(void);
 static char* get_question(uint8_t q);
 static void cmd_mark_question(uint8_t val);
-static char cam_ticked_questions(uint8_t q);
-
+static char cam_tick_questions(uint8_t q);
 
 
 // Question variables
@@ -193,9 +192,13 @@ static msg_t uart_receiver_thread(void *arg)
     			currQuestion = (uint8_t)buf[1];
     			char* buffer1 = get_question((uint8_t)buf[1]);
     				sdWriteTimeout(&SD2,(uint8_t *) buffer1, 64, TIME_INFINITE);
+    		} else if(buf[0] == (uint8_t)0x22){
+    			char questionNum = buf[1];
+    			char numOfTicks = cam_tick_questions(questionNum);
+    			sdWriteTimeout(&SD2,(uint8_t *) numOfTicks , 1, TIME_INFINITE);
     		} else if(buf[0] == (uint8_t)0x21){
     			char picNum = buf[1];
-    			char questionAmount = cam_ticked_questions(currQuestion);
+    			char questionAmount = cam_tick_questions(picNum);
     				//take a picture '!'
     				char fn[10] = {'Q','0','0','-','0','0','.','j','p','g'};
     				cam_capture();
@@ -1125,7 +1128,7 @@ static void cmd_mark_question(uint8_t val) {
 	f_close(&fsrc);
 }
 
-static char cam_ticked_questions(uint8_t q){
+static char cam_tick_questions(uint8_t q){
 	char inString[64];
 	char i;
 	for(i = 0; i < 64; i++){
