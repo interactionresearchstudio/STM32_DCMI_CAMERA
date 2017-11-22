@@ -100,6 +100,10 @@ void hwInit(void) {
   /* Stay in power down state and not interfere with DCMI lines     */
   palSetPadMode(GPIOD, 4, PAL_MODE_OUTPUT_PUSHPULL);
   palClearPad(GPIOD, 4);
+
+
+  /*Pin for selecting solo cam*/
+  palSetPadMode(GPIOA, 9, PAL_MODE_INPUT_PULLUP);
 }
 
 

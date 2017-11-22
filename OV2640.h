@@ -649,6 +649,14 @@ static const struct regval_list ov2640_autolight[] ={
 ENDMARKER,
 };
 
+static const struct regval_list ov2640_office[]={
+{0xff, 0x00},
+{0xc7, 0x40},
+{0xcc, 0x52},
+{0xcd,0x41},
+{0xce,0x66},
+ENDMARKER,
+};
 
 uint8_t cam_write_reg(uint8_t reg, uint8_t value);
 uint8_t cam_read_reg(uint8_t reg, uint8_t *value);

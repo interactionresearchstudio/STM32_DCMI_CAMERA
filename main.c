@@ -21,7 +21,7 @@
 #include "evtimer.h"
 #include "ff.h"
 #include <string.h>
-#define SOLOCAM
+//#define SOLOCAM
 //#define DEBUG
 
 /*SD CARD */
@@ -155,6 +155,9 @@ static WORKING_AREA(waThread2, 2048);
 static msg_t uart_receiver_thread(void *arg)
 {
   (void) arg;
+
+#ifndef SOLOCAM
+
   char buf[4];
   while (TRUE) {
     sdReadTimeout(&SD2, (uint8_t *) buf, 4, TIME_INFINITE);
@@ -268,6 +271,7 @@ static msg_t uart_receiver_thread(void *arg)
     	}
     chThdSleepMilliseconds(100);
  }
+#endif
   return 0;
 }
 
@@ -275,9 +279,12 @@ static msg_t uart_receiver_thread(void *arg)
 
 static WORKING_AREA(waThread1, 2048);
 static msg_t Thread1(void *arg) {
-#ifdef SOLOCAM
+	uint8_t camMode = palReadPad(GPIOA, 9);
+	if(!camMode){
+		#define SOLOCAM
+	}
+	#ifdef SOLOCAM
 	int count = 0;
-	char ch1[9];
 	(void) arg;
 	chRegSetThreadName("btnthread");
 	palClearPad(GPIOB, 3);
@@ -286,6 +293,7 @@ static msg_t Thread1(void *arg) {
 	cam_init();
 	chThdSleepMilliseconds(1000);
 	while (TRUE) {
+		char ch1[9] = {'S','W','0','0','0','.','j','p','g'};
 		uint8_t btnval = palReadPad(GPIOD, 2);
 		if(!btnval) {
 			palSetPad(GPIOB,3);
@@ -302,40 +310,40 @@ static msg_t Thread1(void *arg) {
 			ch1[7] = 'p';
 			ch1[8] = 'g';
 
-			} else if(count < 100 && count > 9) {
-				int div = (char)count/10;
-				ch1[0] = 'S';
-				ch1[1] = 'W';
-				ch1[2] = '0';
-				ch1[3] = (char)div+48;
-				ch1[4] = (char)(count-(div*10)+48);
-				ch1[5] = '.';
-				ch1[6] = 'j';
-				ch1[7] = 'p';
-				ch1[8] = 'g';
-			} else if( count < 1000 && count > 99){
-				int div = (char)count/100;
-				int div10 = (char)count/10;
-				ch1[0] = 'S';
-				ch1[1] = 'W';
-				ch1[2] = (char)div+48;
-				ch1[3] = (char)div10+48;
-				ch1[4] = (char)(count-((div10*10)+(div*100))+48);
-				ch1[5] = '.';
-				ch1[6] = 'j';
-				ch1[7] = 'p';
-				ch1[8] = 'g';
-			} else if(count > 999) {
-				count = 0;
-			}
-
-			cam_save(ch1);
-			chThdSleepMilliseconds(1000);
-			count++;
-			palClearPad(GPIOB, 3);
+		} else if(count < 100 && count > 9) {
+			int div = (char)count/10;
+			ch1[0] = 'S';
+			ch1[1] = 'W';
+			ch1[2] = '0';
+			ch1[3] = (char)div+48;
+			ch1[4] = (char)(count-(div*10)+48);
+			ch1[5] = '.';
+			ch1[6] = 'j';
+			ch1[7] = 'p';
+			ch1[8] = 'g';
+		} else if( count < 1000 && count > 99){
+			int div = (char)count/100;
+			int div10 = (char)(count-(div*100))/10;
+			int div100 = (char) (count - ((div*100) + (div10 * 10)));
+			ch1[0] = 'S';
+			ch1[1] = 'W';
+			ch1[2] = (char)div+48;
+			ch1[3] = (char)div10+48;
+			ch1[4] = (char)div100+48;
+			ch1[5] = '.';
+			ch1[6] = 'j';
+			ch1[7] = 'p';
+			ch1[8] = 'g';
+		} else if(count > 999) {
+			count = 0;
+		}
+		cam_save(ch1);
+		chThdSleepMilliseconds(1000);
+		count++;
+		palClearPad(GPIOB, 3);
 		}
 	}
-#endif
+	#endif
 	chThdSleepMilliseconds(50);
 	return 0;
 }
