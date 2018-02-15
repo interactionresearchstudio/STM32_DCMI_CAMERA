@@ -185,10 +185,14 @@ static msg_t uart_receiver_thread(void *arg)
     				//init camera 'i'
     				cam_on();
     				chThdSleepMilliseconds(100);
-    				cam_init();
+    				if(cam_init() == 0x06){;
     				chThdSleepMilliseconds(100);
     				char outBuff[3] = {'I','N','I'};
     				sdWriteTimeout(&SD2,(uint8_t *)outBuff, 3, TIME_INFINITE);
+    				} else {
+    				char outBuff[3] = {'F','A','I'};
+    				sdWriteTimeout(&SD2,(uint8_t *)outBuff, 3, TIME_INFINITE);
+    				}
     			}
     		} else if(buf[0] == (uint8_t)0x71){
     			//get question number 'q' + buf[1]
@@ -205,8 +209,10 @@ static msg_t uart_receiver_thread(void *arg)
     				//take a picture '!'
     				char fn[10] = {'Q','0','0','-','0','0','.','j','p','g'};
     				cam_capture();
-    				chThdSleepMilliseconds(1000);
+    				chThdSleepMilliseconds(2000);
     				cmd_mark_question((uint8_t)picNum);
+    				chThdSleepMilliseconds(200);
+
     				if(picNum < 10){
     					if(questionAmount < 10){
     							fn[0] = 'Q';
@@ -338,6 +344,11 @@ static msg_t Thread1(void *arg) {
 			count = 0;
 		}
 		cam_save(ch1);
+		ch1[5] = '.';
+		ch1[6] = 'j';
+		ch1[7] = 'p';
+		ch1[8] = 'g';
+
 		chThdSleepMilliseconds(1000);
 		count++;
 		palClearPad(GPIOB, 3);
